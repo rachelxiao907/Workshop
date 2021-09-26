@@ -1,7 +1,12 @@
 # Rachel Xiao
 # SoftDev
-# Classwork0/Random Student Name Using Lists/Created two lists for students in period 1 and 2. Printed a random student name from each period
-# 2021-09-21
+# K05 -- Amalgamate/Combining Code/Found the best way to print a random student name from each period between me, Eliza, and Thomas.
+# 2021-09-24
+
+# Summary:
+# Discoveries:
+# Questions:
+# Comments:
 
 import random
 
@@ -17,3 +22,4 @@ randomName(pd1)
 
 pd2 = ["Jesse Xie", "Rachel Xiao", "Yuqing Wu", "Liesel Wong", "Josephine Lee", "Yaying Liang", "Justin Zou", "Patrick Ging", "Raymond Yueng", "Michael Borczuk"]
 randomName(pd2)
+
