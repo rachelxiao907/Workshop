@@ -34,3 +34,8 @@ K06: StI/O: Divine Your Destiny!
 
 ## Weighted Randomized Selection
 * We generated a random number that was within 0 and the total percentage in the csv file.
+* We did the weighted percentage part by designating different areas from 0 to total percentage to the different occupations depending on the percentage they occupy.
+  * ex. 0 to 6.1 would be Management, 6.1 to 11.1 would be Business and Financial Operations.
+* We check which occupation the random number would land on, and that would be the occupation we select.
+  * ex. If the random number is 9, we would first subtract the Management part from it, making sure that it doesn't land in the Management section, and then subtract the percentage for the Business and Financial Operations from the random number, making it negative, and that means the random number lands in Business and Financial Operations section.
+* This is a truly randomized process as the order we loop through the dictionary is random, which means each time different sections are allocated to the occupations. 
