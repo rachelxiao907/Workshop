@@ -26,6 +26,11 @@ K06: StI/O: Divine Your Destiny!
 * Add to a list with the list.append(value) function. Remove from a list with the list.remove(value) function.
 
 ## Basics of Github-flavored Markdown
+* Markdown is a text-to-HTML conversion tool which allows people to write using an easy-to-read, easy-to-write plain text format. It allows users to style their text easily too! People usually use it to explain the purpose of a program, how to use it, and how the code works.
+* "#" creates headings. The more " # ", the smaller the headings get.
+* Create lists using " * " or " - " at the beginning of a line followed by a space. Indent the line on the next line to create nested lists.
+* " * " around a word with no space around it italicizes it. " ** " around a word with no space bolds it.
+* Learning how to use Markdown is very easy as you can just look at other people's Markdown files to learn the syntax. Some basic syntax in markdown is [here](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
 ## Weighted Randomized Selection
 * We generated a random number that was within 0 and the total percentage in the csv file.
