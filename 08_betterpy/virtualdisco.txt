@@ -1,0 +1,23 @@
+The Wonderful Worms - Rachel Xiao, Michael Borczuk, Wen Hao Dong
+SoftDev
+K08 -- Cross Pollination and Virtual Insanity
+2021-09-30
+
+-- The What:
+A Python virtual environment is a self-contained installation of Python that can store it's own local installations of modules (can be used to run different versions of Python).
+
+-- The How:
+The following command:
+`$ python3 -m venv [directory]`
+will create a Python virtual environment located at the given directory, with the same version of Python as the one used to run the command.
+
+To run the virtual environment use
+`$ [directory]\Scripts\activate.bat`
+if on Windows, and
+`$ source tutorial-env/bin/activate`
+on Unix and MacOS
+
+-- The Why:
+Often, a Python project requires a specific version of a module to be used in order to work.
+
+Creating a virtual environment with its own local modules means that for two different projects, you aren't forced to use the global installation of a module, and can use two different versions of the same module for the two projects. You update each virtual environment separately to not affect other installations.
