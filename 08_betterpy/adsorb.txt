@@ -1,0 +1,12 @@
+The Wonderful Worms - Rachel Xiao, Michael Borczuk, Wen Hao Dong
+SoftDev
+K08 -- Cross Pollination and Virtual Insanity
+2021-09-30
+
+Questions:
+- What does line.strip() do?
+- Is it cheating to use random.choices() for weighted percentages?
+
+Comments:
+
+Concerns:
