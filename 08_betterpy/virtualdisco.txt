@@ -4,7 +4,8 @@ K08 -- Cross Pollination and Virtual Insanity
 2021-09-30
 
 -- The What:
-A Python virtual environment is a self-contained installation of Python that can store it's own local installations of modules (can be used to run different versions of Python).
+A Python virtual environment is a self-contained installation of Python that can store it's own
+local installations of modules (can be used to run different versions of Python).
 
 -- The How:
 The following command:
@@ -20,6 +21,8 @@ on Unix and MacOS
 -- The Why:
 Often, a Python project requires a specific version of a module to be used in order to work.
 
-Creating a virtual environment with its own local modules means that for two different projects, you aren't forced to use the global installation of a module, and can use two different versions of the same module for the two projects. You update each virtual environment separately to not affect other installations.
+Creating a virtual environment with its own local modules means that for two different projects,
+you aren't forced to use the global installation of a module, and can use two different versions
+of the same module for the two projects. You update each virtual environment separately to not affect other installations.
 
-Sources: [Venv Tutorial](https://docs.python.org/3/tutorial/venv.html?fbclid=IwAR171UTRcDd9oN9ZItalgWqozlA-95LgJTNGxD2XUWTb9Rxs2--biazHyp4) and [Creation of Virtual Environments](https://docs.python.org/3/library/venv.html)
+Sources: Venv Tutorial - https://docs.python.org/3/tutorial/venv.html?fbclid=IwAR171UTRcDd9oN9ZItalgWqozlA-95LgJTNGxD2XUWTb9Rxs2--biazHyp4 and Creation of Virtual Environments - https://docs.python.org/3/library/venv.html
