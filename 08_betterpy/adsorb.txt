@@ -8,5 +8,10 @@ Questions:
 - Is it cheating to use random.choices() for weighted percentages?
 
 Comments:
+- The CSV module for parsing the files is very useful. One of us manually read the CSV file.
+- There are many different ways to store values from a CSV file into a reader. 
+- We can use delimiter to tell the program where you want to split values as indexes in a list.
+- DictReader allows us to create a dictionary with the values in the first row as the keys and the other values as the corresponding values.
 
 Concerns:
+- We are not sure whether using random.choices or having a counter for the total percentage that changes based on each weighted percent is a better method for randomizing an occupation. Do they work the same way?
