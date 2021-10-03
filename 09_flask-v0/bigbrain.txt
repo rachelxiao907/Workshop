@@ -2,3 +2,22 @@ Spicy Water: Rachel Xiao, Jesse Xie
 SoftDev
 K09 -- Simple Path To Greatness/Responses to app.py
 2021-10-02
+
+Q0: Where have you seen similar syntax in other langs?
+app = Flask(__name__) is similar to Python, Java, and other languages where a variable's value is set to an output of a function. In this case, __name__ is the input or argument of the function Flask and the variable name is app. Flask(__name__) also looks like a constructor so app could be an instance of the object Flask.
+
+Q1: What points of reference do you have for meaning of '/'?
+In the terminal, '/' is used to show a path for a file. It is used to separate folders in a path. Using '/' may signify that a path is going into a subfolder. Since this is just '/' without any folder names, this might route the app to the route directory.
+
+Q2: Where will this print to? Q3: What will it print?
+The input __name__ will print in the terminal.
+
+Q3: Will this appear anywhere? How u know?
+"No hablo queso!" will not appear anywhere because the function hello_word() isn't being called anywhere so "No hablo queso!" isn't being directly printed.
+
+Q4: Where have you seen similar construcs in other languages?
+In other languages like Java that uses OOP, app.run() is similar to calling a method of an object.
+
+Observations:
+- Installing Flask: "WARNING: You are using pip version 20.2.3; however, version 21.2.4 is available.
+You should consider upgrading via the '/Users/apple/KC/bin/python3 -m pip install --upgrade pip' command."
