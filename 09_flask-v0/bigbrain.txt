@@ -8,12 +8,15 @@ app = Flask(__name__) is similar to Python, Java, and other languages where a va
 
 Q1: What points of reference do you have for meaning of '/'?
 In the terminal, '/' is used to show a path for a file. It is used to separate folders in a path. Using '/' may signify that a path is going into a subfolder. Since this is just '/' without any folder names, this might route the app to the route directory.
+- After running app.py, I think that @app.route("/") tells the Flask app where Flask is intalled so that the file can run.
 
 Q2: Where will this print to? Q3: What will it print?
 The input __name__ will print in the terminal.
+- __main__ is actually printed in the terminal.
 
 Q3: Will this appear anywhere? How u know?
 "No hablo queso!" will not appear anywhere because the function hello_word() isn't being called anywhere so "No hablo queso!" isn't being directly printed.
+- "No hablo queso!" actually appears on the webpage at http://127.0.0.1:5000/ 
 
 Q4: Where have you seen similar construcs in other languages?
 In other languages like Java that uses OOP, app.run() is similar to calling a method of an object.
@@ -21,3 +24,15 @@ In other languages like Java that uses OOP, app.run() is similar to calling a me
 Observations:
 - Installing Flask: "WARNING: You are using pip version 20.2.3; however, version 21.2.4 is available.
 You should consider upgrading via the '/Users/apple/KC/bin/python3 -m pip install --upgrade pip' command."
+- Running app.py:
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+__main__
+127.0.0.1 - - [03/Oct/2021 10:51:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2021 10:51:01] "GET /favicon.ico HTTP/1.1" 404 -
+__main__
+127.0.0.1 - - [03/Oct/2021 10:53:40] "GET / HTTP/1.1" 200 -
