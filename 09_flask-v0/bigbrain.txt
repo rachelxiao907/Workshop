@@ -8,7 +8,7 @@ app = Flask(__name__) is similar to Python, Java, and other languages where a va
 
 Q1: What points of reference do you have for meaning of '/'?
 In the terminal, '/' is used to show a path for a file. It is used to separate folders in a path. Using '/' may signify that a path is going into a subfolder. Since this is just '/' without any folder names, this might route the app to the route directory.
-- After running app.py, I think that @app.route("/") tells the Flask app where Flask is intalled so that the file can run.
+- After running app.py, I think that @app.route("/") tells the Flask app where Flask is intalled so that the file can run. The "/" in the route method for app indicates a default route, where changing the parameter would alter the route that is taken.
 
 Q2: Where will this print to? Q3: What will it print?
 The input __name__ will print in the terminal.
@@ -17,6 +17,8 @@ The input __name__ will print in the terminal.
 Q3: Will this appear anywhere? How u know?
 "No hablo queso!" will not appear anywhere because the function hello_word() isn't being called anywhere so "No hablo queso!" isn't being directly printed.
 - "No hablo queso!" actually appears on the webpage at http://127.0.0.1:5000/ 
+	- app.route("/") may have caused the command to be routed towards the "/" or the default directory of the domain.
+	- after changing app.route("/") to app.route("/test"), the text appears on "http://127.0.0.1:5000/test" and "http://127.0.0.1:5000/" returns on error
 
 Q4: Where have you seen similar construcs in other languages?
 In other languages like Java that uses OOP, app.run() is similar to calling a method of an object.
