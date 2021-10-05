@@ -17,4 +17,5 @@ if __name__ == "__main__":  # true if this file NOT imported
     app.run()
 
 # The app only runs if the file is not imported.
+# __name__ is the file name of this app when it's being imported by another file.
 # Except the checking of file importation, the observations from v3 holds true for this app.
