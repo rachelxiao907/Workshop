@@ -4,12 +4,15 @@ K11 -- Some Things Never Change
 2021-10-06
 
 - app.py is the same as the one in v4.
-- static files are used for unchanging things like making a resource available (research papers). Ex: a page where nothing like the user's name is displayed as it changes between useers.
+- static files are used for unchanging things like making a resource available (research papers). 
+Ex: a page where nothing like the user's name is displayed as it changes between users.
 
 - Predictions: accessing foo via http://localhost:5000/static/foo would print its contents on the website.
-- Results: there is a pop up window about opening and saving foo. It does this because foo has no extension.
+- Results: there is a pop up window about opening and saving foo. It does this because foo has no extension. 
 When you open the file in a text editor it would be the same as foo.
-"which is: DMS file" shows up on mac. "which is: application/octet-stream" shows up on linux. The file will be downloaded if you choose to save it.
+"which is: DMS file" shows up on mac. "which is: application/octet-stream" shows up on linux. 
+The file will be downloaded if you choose to save it.
 
-- Predictions: accessing foo.html via http://localhost:5000/static/foo.html would print out its content on the website as HTML code does.
+- Predictions: accessing foo.html via http://localhost:5000/static/foo.html would 
+print out its content on the website as HTML code does.
 - Results: "Is this plaintext, though?" appears on the website.
