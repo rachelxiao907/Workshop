@@ -6,13 +6,24 @@ K11 -- Some Things Never Change
 - app.py is the same as the one in v4.
 - static files are used for unchanging things like making a resource available (research papers). 
 Ex: a page where nothing like the user's name is displayed as it changes between users.
+- app.py has access to the static folder.
+- viewing the page source just displays the contents of the file.
 
-- Predictions: accessing foo via http://localhost:5000/static/foo would print its contents on the website.
+- Predictions: accessing foo via http://localhost:5000/static/foo would print its contents on the webpage.
 - Results: there is a pop up window about opening and saving foo. It does this because foo has no extension. 
 When you open the file in a text editor it would be the same as foo.
 "which is: DMS file" shows up on mac. "which is: application/octet-stream" shows up on linux. 
 The file will be downloaded if you choose to save it.
 
 - Predictions: accessing foo.html via http://localhost:5000/static/foo.html would 
-print out its content on the website as HTML code does.
-- Results: "Is this plaintext, though?" appears on the website.
+print out its content on the webpage as HTML code does.
+- Results: "Is this plaintext, though?" appears on the webpage.
+
+ Is foo.html plaintext, though?
+ - Yes it is. Because when we cat it, it shows what is inside the file.
+ The reason why it behaves differently than foo is because the how the
+ content of the file is in page source and if you have html there you
+ you would get the text to display on the website.
+- If .txt is added to the end of foo, a download for foo is not prompted but
+instead, the contents of the text file are displayed on the webpage. The site 
+seems to respond differently to different file extensions.
