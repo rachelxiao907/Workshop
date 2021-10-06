@@ -1,6 +1,7 @@
-# Clyde 'Thluffy' Sinclair
+# Team Polar: Yuqing Wu (Zero), Jesse Xie (Polly), Rachel Xiao (Mooana)
 # SoftDev
-# Oct 2021 
+# K11 -- Some Things Never Change
+# 2021-10-06
 
 # DEMO 
 # basics of /static folder
