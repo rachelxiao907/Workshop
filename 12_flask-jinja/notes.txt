@@ -1,12 +1,39 @@
-Team Polar: 
+Team Polar: Rachel Xiao (Mooana), Yuqing Wu (Zero), Jesse Xie (Polly)
 SoftDev
+K12: ...or The Only Constant is Change?
+2021-10-07
+
+Observations:
+model_tmplt.html
+- This file is in a templates folder. This seems similar to the static folder where files in it
+will serve a particular function. The app file seems to automatically know that the templates
+folder exists.
+- The body of the file looks like a for loop from Python which iterates through a collection of
+items and has an ending {} to stop the loop.
+- What do the % symbols signify?
+- What is the difference between {{ and {% ?
+
+app.py
+- The values inside the {{}} may be replaced when you give inputs to the app.
+
 
 Predictions:
-- The title of the page (the name of the tab) will be {{ foo }} where foo is equal to fooooo.
-- The body of the file looks like a for loop from Python which iterates through a collection of items.
-- Serving the app on localhost will display each value of the list coll = [0,1,1,2,3,5,8].
-- The values inside the {{}} may be replaced when you give inputs to the template.
-- Q0: We think that the terminal will print an error that app.py is missing a template module.
-- Q1: https://localhost:5000/my_foist_template
-- Q2: The first argument of render_template accesses the template model_tmplt.html.
- 
+- Running app.py on localhost will display the title of the page (the name of the tab) as
+{{ foo }} where foo is equal to fooooo.
+- Running the app on localhost will display each value of the list coll = [0,1,1,2,3,5,8] on a
+new line.
+
+
+Q0: What happens if you remove render_template from this line?
+We think that the terminal will print an error that app.py is missing a template module.
+There is actually a name error for render_template where it is not defined because 
+we call that function later on but do not import it.
+
+Q1: Can all of your teammates confidently predict the URL to use to load this page?
+http://127.0.0.1:5000/my_foist_template
+
+Q2: What is the significance of each argument?
+The first argument of render_template() accesses the file model_tmplt.html in the templates
+folder. The second and third arguments are the variables in that template file being assigned to
+a certain value. It seems that the app.py file can access variables (formatted within {{ }}) from the template file it is
+rendering.
