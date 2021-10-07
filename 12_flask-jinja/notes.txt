@@ -10,11 +10,16 @@ will serve a particular function. The app file seems to automatically know that 
 folder exists.
 - The body of the file looks like a for loop from Python which iterates through a collection of
 items and has an ending {} to stop the loop.
+	- Removing endfor breaks the code and prevents it from working. HTML loop format?
+	- This differs from other languages like python that don't need a signifier to end a
+	loop.
 - What do the % symbols signify?
 - What is the difference between {{ and {% ?
+- What makes a "template" a template?
 
 app.py
 - The values inside the {{}} may be replaced when you give inputs to the app.
+- @app.route() directs methods below it to the subdirectory in its parameter.
 
 
 Predictions:
@@ -36,5 +41,6 @@ http://127.0.0.1:5000/my_foist_template
 Q2: What is the significance of each argument?
 The first argument of render_template() accesses the file model_tmplt.html in the templates
 folder. The second and third arguments are the variables in that template file being assigned to
-a certain value. It seems that the app.py file can access variables (formatted within {{ }}) from the template file it is
-rendering.
+a certain value. It seems that the app.py file can access variables (formatted within {{ }}) from the template file it is rendering. Render_template() looks like it only requires one
+argument (to access a file) and the other ones are optional given that the variables are
+accounted for.
