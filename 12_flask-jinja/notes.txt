@@ -1,0 +1,12 @@
+Team Polar: 
+SoftDev
+
+Predictions:
+- The title of the page (the name of the tab) will be {{ foo }} where foo is equal to fooooo.
+- The body of the file looks like a for loop from Python which iterates through a collection of items.
+- Serving the app on localhost will display each value of the list coll = [0,1,1,2,3,5,8].
+- The values inside the {{}} may be replaced when you give inputs to the template.
+- Q0: We think that the terminal will print an error that app.py is missing a template module.
+- Q1: https://localhost:5000/my_foist_template/model_tmplt.html
+- Q2: The first argument of render_template accesses the template model_tmplt.html.
+ 
