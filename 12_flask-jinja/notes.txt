@@ -22,6 +22,7 @@ Predictions:
 {{ foo }} where foo is equal to fooooo.
 - Running the app on localhost will display each value of the list coll = [0,1,1,2,3,5,8] on a
 new line.
+- It seems like our predictions were right.
 
 
 Q0: What happens if you remove render_template from this line?
