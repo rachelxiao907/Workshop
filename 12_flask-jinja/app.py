@@ -1,6 +1,7 @@
-# Clyde 'Thluffy' Sinclair
+# Team Polar: Rachel Xiao (Mooana), Yuqing Wu (Zero), Jesse Xie (Polly)
 # SoftDev
-# Oct 2021
+# K12: ...or The Only Constant is Change?
+# 2021-10-07
 
 from flask import Flask, render_template #Q0: What happens if you remove render_template from this line?
 app = Flask(__name__)
