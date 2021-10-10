@@ -13,10 +13,29 @@
    </head>
 
    <body>
-     {% for item in collection %}
-      {{ item }}
-      <br>
-     {% endfor %}
+     <h1> Using Weighted Percentages to Choose a Random Occupation and Display the Data for the Occupations </h1>
+     <h2> Team KingMlob: Liesel Wong, Yaying Liang, Rachel Xiao (Duckies: King Hagrid, Blob, and Mooana) <br>
+      SoftDev <br>
+      K13 -- Template for Success <br>
+      2021-10-08 </h2>
+
+      <h1> {{ selected_occupation}} <h1>
+      <h1> {{ occupation }} </h1>
+
+     <table border="1">
+       <tr>
+         <th> Job Class </th>
+         <th> Percentage </th>
+       </tr>
+
+       {% for job, percentage in dict.items() %} <!-- loop through the key value pairs of the dictionary -->
+        <tr>
+          <td> {{ job }} </td>
+          <td> {{ percentage }} </td>
+        </tr>
+        {% endfor %}
+     </table>
+
    </body>
 
  </html>
