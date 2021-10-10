@@ -3,5 +3,19 @@ SoftDev
 K13 -- Template for Success
 2021-10-08
 
+Step 0: Notes on Individual Codes
+- multiply by 10 = no decimals
+- str(<list>) turns the list into a string (type-casting)
+- random.choices seems like the best way to select the occupation
+- looping through dict.items() allows us to access a dictionary's keys and values
+
 EGO:
-- 
+- egoless programming helps us detect errors, create clearer and more understandable code, eliminate inefficient code (which is more efficient in the long-run), and increases the competence of the group coders
+- teaches the people who read the code because they have to understand it to critique it
+- attack leads to defense; we don't want that
+- understand that errors are not attacks on the person, just facts that have to be uncovered
+
+*We definitely see it in our SoftDev class - by sharing our code, we know how to improve our own code and also find the best way of tackling the problem
+*Additionally, having someone read over your code improves your ability to explain your code.
+*You have to be open to critique to become better.
+**It makes coding more interesting!!!
