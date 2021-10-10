@@ -30,7 +30,7 @@ def make_choice():
 
 @app.route("/occupyflaskst")
 def test_tmplt():
-    return render_template('tablified.html', foo = "Occupation Chooser", dict = occupations, selected_occupation = make_choice())
+    return render_template('tablified.html', dict = occupations, selected_occupation = make_choice())
 
 if __name__ == "__main__":
     app.debug = True
