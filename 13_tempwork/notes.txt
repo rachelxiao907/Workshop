@@ -9,6 +9,11 @@ Step 0: Notes on Individual Codes
 - random.choices seems like the best way to select the occupation
 - looping through dict.items() allows us to access a dictionary's keys and values
 
+Notable Things:
+- through this homework, we got a better understanding of accessing data from dictionaries
+- we still don't know exactly how to add another value to a key and how to access a specific
+value of a key
+
 EGO:
 - egoless programming helps us detect errors, create clearer and more understandable code, eliminate inefficient code (which is more efficient in the long-run), and increases the competence of the group coders
 - teaches the people who read the code because they have to understand it to critique it
