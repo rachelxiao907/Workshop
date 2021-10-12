@@ -19,19 +19,21 @@
       K13 -- Template for Success <br>
       2021-10-08 </h2>
 
-      <h1 style="background-color: #e5ecff;"> Random Occupation: {{ selected_occupation}} <h1>
+      <h1 style="background-color: #e5ecff;"> Random Occupation: {{ selected_occupation }} <h1>
       <h1> {{ occupation }} </h1>
 
      <table border="1">
        <tr>
          <th> Job Class </th>
          <th> Percentage </th>
+         <th> Links </th>
        </tr>
 
-       {% for job, percentage in dict.items() %} <!-- loop through the key value pairs of the dictionary -->
+       {% for job, value in dict.items() %} <!-- loop through the key value pairs of the dictionary -->
         <tr>
           <td> {{ job }} </td>
-          <td> {{ percentage }} </td>
+          <td> {{ value[0] }} </td> <!-- percentage -->
+          <td> <a href={{ value[1] }} target="_blank">{{ value[1] }}</a> </td> <!-- link -->
         </tr>
         {% endfor %}
      </table>
