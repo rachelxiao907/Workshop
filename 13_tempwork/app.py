@@ -22,7 +22,7 @@ with open('data/occupations.csv') as csv_file: #give access to the file by openi
             occupations[row[0]] =[float(row[1]), row[2]] #put the data in a dictionary. job: [percent, link]
             
 def make_choice():
-    ''' Uses the dictionary data to return a random occupation and its link based on weighted percentages. '''
+    ''' Uses the dictionary data to return a random occupation based on its weighted percentages. '''
     jobs = list(occupations.keys()) #convert the keys into a list
     jobs.pop(len(jobs)-1) #remove the "Total" index
     
@@ -32,7 +32,7 @@ def make_choice():
     for arr in values:
         percentages.append(arr[0]) #store the weighted percentages in a list
     choice = random.choices(jobs, weights=percentages, k=1) #create a list of with the random occupation
-    return choice[0] + " | Link: " + occupations[choice[0]][1] #access the key's second index of its list
+    return choice[0]
 
 @app.route("/occupyflaskst")
 def test_tmplt():
