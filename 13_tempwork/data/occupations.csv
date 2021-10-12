@@ -1,24 +1,24 @@
 Job Class,Percentage
-Management,6.1
-Business and Financial operations,5
-Computer and Mathematical,2.7
-Architecture and Engineering,1.7
-"Life, Physical and Social Science",0.9
-Community and Social Service,1.6
-Legal,0.8
-"Education, training and library",6.1
-"Arts, design, entertainment, sports and media",1.7
-Healthcare practioners and technical,5.5
-Healthcare support,2.8
-Protective service,2.3
-Food preparation and serving,8.3
-Building and grounds cleaning and maintenance,3.7
-Personal care and service,4
-Sales,10.2
-Office and administrative support,15.1
-"Farming, fishing and forestry",0.6
-Construction and extraction,4.3
-"Installation, maintenance and repair",3.8
-Production,6.1
-Transportation and material moving,6.5
-Total,99.8
+Management,6.1,https://en.wikipedia.org/wiki/Management
+Business and Financial operations,5,https://en.wikipedia.org/wiki/Business
+Computer and Mathematical,2.7,https://datausa.io/profile/soc/computer-mathematical-occupations
+Architecture and Engineering,1.7,https://study.com/articles/Architectural_Engineering_Requirements_for_Becoming_an_Architecture_Engineer.html
+"Life, Physical and Social Science",0.9,https://www.bls.gov/oes/current/oes190000.htm
+Community and Social Service,1.6,https://socialworklicensure.org/types-of-social-workers/community-social-workers/
+Legal,0.8,https://www.lsac.org/discover-law/types-law-programs/fields-law
+"Education, training and library",6.1,https://www.calcareers.ca.gov/CalHRPublic/Landing/StateCareerLevel2.aspx?SocCode=25-0000&SocTitle=Education,%20Training,%20and%20Library
+"Arts, design, entertainment, sports and media",1.7,https://www.onetonline.org/find/family?f=27&g=Go
+Healthcare practioners and technical,5.5,http://www.careers.org/occupations/field/29/healthcare-practitioners-and-technical
+Healthcare support,2.8,https://careerwise.minnstate.edu/careers/support-services-pathway.html
+Protective service,2.3,https://www.fletc.gov/training-program/protective-service-operations-training-program
+Food preparation and serving,8.3,https://collegegrad.com/careers/food-preparation-and-serving
+Building and grounds cleaning and maintenance,3.7,https://www.bls.gov/oes/current/oes370000.htm
+Personal care and service,4,https://collegegrad.com/careers/personal-care-and-service
+Sales,10.2,https://www.themuse.com/advice/sales-interview-tips
+Office and administrative support,15.1,https://www.thebalancecareers.com/administrative-job-titles-2061489
+"Farming, fishing and forestry",0.6,https://collegegrad.com/careers/farming-fishing-and-forestry
+Construction and extraction,4.3,https://www.raise.me/careers/construction-and-extraction/
+"Installation, maintenance and repair",3.8,https://collegegrad.com/careers/installation-maintenance-and-repair
+Production,6.1,https://www.woodpersonnel.com/2016/02/09/production-job-interview-questions/
+Transportation and material moving,6.5,https://www.raise.me/careers/transportation-and-material-moving/
+Total,99.8,google.com
