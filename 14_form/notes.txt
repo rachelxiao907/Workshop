@@ -2,3 +2,22 @@ Team Marshmallow: Liesel Wong (King Hagrid), Yoonah Chang (Yelena), Rachel Xiao 
 SoftDev
 K14 -- Form and Function
 2021-10-14
+
+TEMPLATE
+Observations:
+- In a form tag, you can put an action="/path" which runs the python code that uses the same route. The path is where the webpage will redirect you after submitting the form
+- Forms let you send data to somewhere!!
+- Input tags have types. The type "text" allows you to submit text and the type "submit" lets click a button to send data to a server. Input tags also have names which could be the name of the data input. The name attribute allows you to access it elsewhere (in the backend)
+
+Predictions:
+- A space to type in your username and a submit button appears.
+- When the user submits the form, the function authenticate() will run because they use the same app.route to /auth. (AFTER SUBMITTING, THE USER IS BROUGHT TO THE AUTHENTICATION PAGE http://127.0.0.1:5000/auth)
+
+APP
+Observations:
+- The terminal prints empty data that is filled after the user submits the form due to the request functions.
+- The login page is the home page that uses the login template. The authentication page is another page that goes to /auth and only returns a string.
+
+Predictions: 
+- The user will see the "Waaaa hooo HAAAH" message, once the user submits the form asking for their username. (THIS IS TRUE)
+- When the app is run, the disp_loginpage() function will display data about the app file and the input data of the user from the form.
