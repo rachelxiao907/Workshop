@@ -27,15 +27,17 @@ PROTIP: Insert your own in-line comments wherever they will help your future sel
 def disp_loginpage():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
-    print(app)
+    print(app) # <Flask 'app'>
     print("***DIAG: request obj ***")
-    print(request)
+    print(request) # <Request 'http://127.0.0.1:5000/' [GET]> --after submitting form--> <Request 'http://127.0.0.1:5000/auth?username=hello&sub1=Submit+Query' [GET]>
+                   # request shows the url of the localhost when tracking the form data
     print("***DIAG: request.args ***")
-    print(request.args)
+    print(request.args) # ImmutableMultiDict([]) --> ImmutableMultiDict([('username', 'hello'), ('sub1', 'Submit Query')])  |  (this creates a dictionary with
+                        # [name of input tag: user input] 
     #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
+    #print(request.args['username']) # hello  |  (this prints the inputted username)
     print("***DIAG: request.headers ***")
-    print(request.headers)
+    print(request.headers) # Host: 127.0.0.1:5000
     return render_template( 'login.html' )
 
 
