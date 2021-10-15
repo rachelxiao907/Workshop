@@ -15,9 +15,9 @@ Predictions:
 
 APP
 Observations:
-- The terminal prints empty data that is filled after the user submits the form due to the request functions.
+- The terminal prints empty data lists or dictionaries(?)  that is filled after the user submits the form due to the request functions.
 - The login page is the home page that uses the login template. The authentication page is another page that goes to /auth and only returns a string.
 
 Predictions: 
-- The user will see the "Waaaa hooo HAAAH" message, once the user submits the form asking for their username. (THIS IS TRUE)
+- The user will see the "Waaaa hooo HAAAH" message, once the user submits the form asking for their username. (THIS IS TRUE) --> we will change the authenticate() function to render a template so the app will respond with a good page
 - When the app is run, the disp_loginpage() function will display data about the app file and the input data of the user from the form.
