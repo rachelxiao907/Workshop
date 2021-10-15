@@ -1,7 +1,7 @@
 # Team Marshmallow: Liesel Wong (King Hagrid), Yoonah Chang (Yelena), Rachel Xiao (Mooana)
 # SoftDev
 # K14 -- Form and Function
-# 2021-10-14 
+# 2021-10-14
 
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
@@ -32,10 +32,11 @@ def disp_loginpage():
     print(request) # <Request 'http://127.0.0.1:5000/' [GET]> --after submitting form--> <Request 'http://127.0.0.1:5000/auth?username=hello&sub1=Submit+Query' [GET]>
                    # request shows the url of the localhost when tracking the form data
     print("***DIAG: request.args ***")
-    print(request.args) # ImmutableMultiDict([]) --> ImmutableMultiDict([('username', 'hello'), ('sub1', 'Submit Query')])  |  (this creates a dictionary with
-                        # [name of input tag: user input] 
+    print(request.args) # ImmutableMultiDict([]) --> ImmutableMultiDict([('username', 'hello'), ('sub1', 'Submit Query')])
+                        # this creates a dictionary with [name of input tag: user input]
     #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username']) # hello  |  (this prints the inputted username)
+    #print(request.args['username']) # hello  |  this prints the inputted username by using the 'name' attribute of the input from the HTML file
+                                     # we remember from Java that args[index] allows us to access user inputs
     print("***DIAG: request.headers ***")
     print(request.headers) # Host: 127.0.0.1:5000
     return render_template( 'login.html' )
