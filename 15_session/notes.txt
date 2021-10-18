@@ -6,8 +6,14 @@ K15 -- Sessions Greetings
 Dev Console Observations:
 - We watched the Dev Console as we entered a username into the web page of 14_form.
 - After submitting, the Dev Console prints "GET http://127.0.0.1:5000/favicon.ico"
-with a 404 NOT FOUND error that refers us to this link: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status. The resource makes us think that they can't find the favicon source because we didn't put an image that appears on the tab.
-- After submitting, we also get "GET http://127.0.0.1:5000/auth?username=f&sub1=Submit+Query" which is revealed after clicking the request button. The status is 200 OK which is a success status response. This depends on the request method so in this case, since the GET method is used, "the resource has been fetched and is transmitted in the message body." The data from the form has been successfully stored and passed to the template.
+with a 404 NOT FOUND error that refers us to this link: https://developer.mozilla.org/en-US/docs/
+Web/HTTP/Status. The resource makes us think that they can't find the favicon source because we
+didn't put an image that appears on the tab.
+- After submitting, we also get "GET http://127.0.0.1:5000/auth?username=f&sub1=Submit+Query" which
+is revealed after clicking the request button. The status is 200 OK which is a success status
+response. This depends on the request method so in this case, since the GET method is used, "the
+resource has been fetched and is transmitted in the message body." The data from the form has
+been successfully stored and passed to the template.
 	- In this line, when we click on the response tab, we can see our response.html displayed.
 
 References:
