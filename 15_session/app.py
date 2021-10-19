@@ -56,14 +56,24 @@ def authenticate():
     #print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
-    if request.args['username'] != "topher" and request.args['password'] != "mykolyk":
-        return render_template('login.html', explain="Username and Password are wrong")
-    elif request.args['username'] != "topher":
-        return render_template('login.html', explain="Username is wrong")
-    elif request.args['password'] != "mykolyk":
-        return render_template('login.html', explain="Password is wrong")
-    else:
-        return render_template('response.html', username=request.args['username'], method=request.method)  #response to a form submission
+    if request.method == 'GET':
+        if request.args['username'] != "topher" and request.args['password'] != "mykolyk":
+            return render_template('login.html', explain="Username and Password are wrong")
+        elif request.args['username'] != "topher":
+            return render_template('login.html', explain="Username is wrong")
+        elif request.args['password'] != "mykolyk":
+            return render_template('login.html', explain="Password is wrong")
+        else:
+            return render_template('response.html', username=request.args['username'], method=request.method)  #response to a form submission
+    elif request.method == 'POST':
+        if request.form['username'] != "topher" and request.form['password'] != "mykolyk":
+            return render_template('login.html', explain="Username and Password are wrong")
+        elif request.form['username'] != "topher":
+            return render_template('login.html', explain="Username is wrong")
+        elif request.form['password'] != "mykolyk":
+            return render_template('login.html', explain="Password is wrong")
+        else:
+            return render_template('response.html', username=request.form['username'], method=request.method)  #response to a form submission
 
 
 
