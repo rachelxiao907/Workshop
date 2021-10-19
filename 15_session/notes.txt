@@ -15,6 +15,9 @@ response. This depends on the request method so in this case, since the GET meth
 resource has been fetched and is transmitted in the message body." The data from the form has
 been successfully stored and passed to the template.
 	- In this line, when we click on the response tab, we can see our response.html displayed.
+- Because we couldn't find any cookies in the 14_form web page, we observed the cookies as we
+logged into the github website. We noticed that there are response and request cookies for the GET
+and POST methods. It seems like there are conditions as we noticed a line that said "logged in: no"
 
 References:
 - favicon.ico: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
