@@ -6,6 +6,7 @@
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 from flask import request           #facilitate form submission
+from flask import session           #facilitate storing information
 
 #the conventional way:
 #from flask import Flask, render_template, request
@@ -55,7 +56,14 @@ def authenticate():
     #print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
-    return render_template('response.html', username=request.args['username'], method=request.method)  #response to a form submission
+    if request.args['username'] != "topher" and request.args['password'] != "mykolyk":
+        return render_template('login.html', explain="Username and Password are wrong")
+    elif request.args['username'] != "topher":
+        return render_template('login.html', explain="Username is wrong")
+    elif request.args['password'] != "mykolyk":
+        return render_template('login.html', explain="Password is wrong")
+    else:
+        return render_template('response.html', username=request.args['username'], method=request.method)  #response to a form submission
 
 
 
