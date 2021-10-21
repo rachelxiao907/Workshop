@@ -38,6 +38,10 @@ Questions:
 use to retrieve the input?
 
 
+What we learned in gallery walk:
+- Making type="password" for inputs masks the passwords.
+
+
 References:
 - favicon.ico: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 - 200 OK: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200
