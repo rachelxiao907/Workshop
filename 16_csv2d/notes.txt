@@ -1,3 +1,16 @@
+Team Marshmallow: Liesel Wong (King Hagrid), Yoonah Chang (Yelena), Rachel Xiao (Mooana)
+SoftDev
+K16 -- All About Database
+2021-10-20
+
+CSV Module:
+- Dict.Reader() creates a list where the values in the first row are the keys and the other data are
+the values of its corresponding key.
+- Reader creates a list for each row. For every new piece of data in a row, it is stored at a new
+index in the list.
+- References: https://docs.python.org/3/library/csv.html
+
+----------------------------------------------------------
 Relational database
  
 DB that stores information as a collection of tables.
