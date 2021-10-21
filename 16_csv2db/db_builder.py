@@ -1,7 +1,7 @@
-#Clyde "Thluffy" Sinclair
-#SoftDev  
-#skeleton/stub :: SQLITE3 BASICS
-#Dec 2020 -- The Time of the Rona
+# Team Marshmallow: Rachel Xiao (Mooana), Liesel Wong (King Hagrid), Yoonah Chang (Yelena)
+# SoftDev
+# K16 -- All About Database
+# 2021-10-22
 
 import sqlite3   #enable control of an sqlite database
 import csv       #facilitate CSV I/O
@@ -25,5 +25,3 @@ c.execute(command)    # run SQL statement
 
 db.commit() #save changes
 db.close()  #close database
-
-
