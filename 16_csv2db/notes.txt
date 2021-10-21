@@ -10,6 +10,10 @@ the values of its corresponding key.
 index in the list.
 - References: https://docs.python.org/3/library/csv.html
 
+SQLITE:
+- We learned that the shell displayes ...> when it thinks that we are continuing a line of code. To end code statements, we need to use semicolons.
+- SQL makes it easy to access specific information using column names.
+
 ----------------------------------------------------------
 Relational database
  
