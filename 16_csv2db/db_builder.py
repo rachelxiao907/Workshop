@@ -18,8 +18,17 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 # < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
 
 
-command = ""          # test SQL stmt in sqlite3 shell, save as string
+students_file = csv.DictReader(open("students.csv")) # values in the first row are the keys of the dict
+courses_file = csv.DictReader(open("courses.csv"))
+# for row in students_file: # check how the dictionary reader looks like
+#    print(row)
+
+command = "CREATE TABLE students(name TEXT, age INTEGER KEY, id INTEGER PRIMARY KEY);"          # test SQL stmt in sqlite3 shell, save as string
+command1 = "SELECT * FROM students;"
+command2 = "CREATE TABLE courses(code TEXT, mark INTEGER KEY, id INTEGER PRIMARY KEY);"
 c.execute(command)    # run SQL statement
+c.execute(command1)
+c.execute(command2)
 
 #==========================================================
 
