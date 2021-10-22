@@ -13,6 +13,8 @@ index in the list.
 SQLITE:
 - We learned that the shell displayes ...> when it thinks that we are continuing a line of code. To end code statements, we need to use semicolons.
 - SQL makes it easy to access specific information using column names.
+- It seems like the SQL table is ordering the table by the PRIMARY KEY.
+- Use PRIMARY to identify the uniqueness of the row in the table. This is the identifier that should be different for each row.
 
 ----------------------------------------------------------
 Relational database
