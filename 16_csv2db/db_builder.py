@@ -23,11 +23,17 @@ courses_file = csv.DictReader(open("courses.csv"))
 # for row in students_file: # check how the dictionary reader looks like
 #    print(row)
 
+# CREATE TABLE IF NOT EXIST bypasses the error of TABLE ALREADY EXISTS
 command = "CREATE TABLE students(name TEXT, age INTEGER KEY, id INTEGER PRIMARY KEY);"          # test SQL stmt in sqlite3 shell, save as string
-command1 = "SELECT * FROM students;"
-command2 = "CREATE TABLE courses(code TEXT, mark INTEGER KEY, id INTEGER PRIMARY KEY);"
 c.execute(command)    # run SQL statement
-c.execute(command1)
+for row in students_file:
+    command = "INSERT INTO students VALUES(row['name'], row['age'], row['id'])"
+    c.execute(command)
+
+command1 = "CREATE TABLE IF NOT EXIST courses(code TEXT, mark INTEGER KEY, id INTEGER PRIMARY KEY);"
+command2 = "SELECT * FROM students;"
+
+#c.execute(command1)
 c.execute(command2)
 
 #==========================================================
