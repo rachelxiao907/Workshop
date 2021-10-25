@@ -18,23 +18,18 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 # < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
 
 
-students_file = csv.DictReader(open("students.csv")) # values in the first row are the keys of the dict
-courses_file = csv.DictReader(open("courses.csv"))
+students_file = csv.DictReader(open("students.csv")) # values in the first row are the keys of the dict for each row
 # for row in students_file: # check how the dictionary reader looks like
-#    print(row)
-
+#   print(row) # {'name': 'alison', 'age': '23', 'id': '10'}
 # CREATE TABLE IF NOT EXIST bypasses the error of TABLE ALREADY EXISTS
-command = "CREATE TABLE students(name TEXT, age INTEGER KEY, id INTEGER PRIMARY KEY);"          # test SQL stmt in sqlite3 shell, save as string
-c.execute(command)    # run SQL statement
-for row in students_file:
-    command = "INSERT INTO students VALUES(row['name'], row['age'], row['id'])"
-    c.execute(command)
+c.execute("CREATE TABLE IF NOT EXISTS students (name TEXT, age INTEGER, id INTEGER);")    # create students table
+for lines in students_file: # loop through each dictionary in reader
+    c.execute("INSERT INTO students VALUES(\"" + lines['name'] + "\"," + lines['age'] + "," + lines['id'] + ")") # populate the table
 
-command1 = "CREATE TABLE IF NOT EXIST courses(code TEXT, mark INTEGER KEY, id INTEGER PRIMARY KEY);"
-command2 = "SELECT * FROM students;"
-
-#c.execute(command1)
-c.execute(command2)
+courses_file = csv.DictReader(open("courses.csv"))
+c.execute("CREATE TABLE IF NOT EXISTS courses (code TEXT, mark INTEGER, id INTEGER);")    # create courses table
+for lines in courses_file:
+    c.execute("INSERT INTO courses VALUES(\"" + lines['code'] + "\"," + lines['mark'] + "," + lines['id'] + ")")
 
 #==========================================================
 
