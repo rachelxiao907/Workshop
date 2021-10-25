@@ -23,6 +23,16 @@ exactly can PRIMARY KEYs be used for?
 - We noticed that the commands have to be Strings so we used concatenation when using the INSERT
 method.
 - When we run db_builder.py twice, the table repeats the values.
+- "INSERT INTO student VALUES (?, ?, ?)", (lines['name'], lines['age'], lines['id'])
+- f strings make the code easier to read (no concatenation)
+- f"""
+            INSERT INTO courses VALUES
+              ({repr(row['code'])},
+               {row['mark']},
+               {row['id']})
+        """
+  { } allows us to use exactly what's in the brackets
+  repr returns a printable representational string
 
 ----------------------------------------------------------
 Relational database
