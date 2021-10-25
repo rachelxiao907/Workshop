@@ -22,6 +22,7 @@ it's created, we received a "sqlite3.IntegrityError: UNIQUE constraint failed: c
 exactly can PRIMARY KEYs be used for?
 - We noticed that the commands have to be Strings so we used concatenation when using the INSERT
 method.
+- When we run db_builder.py twice, the table repeats the values.
 
 ----------------------------------------------------------
 Relational database
