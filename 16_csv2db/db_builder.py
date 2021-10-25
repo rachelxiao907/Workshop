@@ -14,10 +14,6 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 #==========================================================
 
-
-# < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
-
-
 students_file = csv.DictReader(open("students.csv")) # values in the first row are the keys of the dict for each row
 # for row in students_file: # check how the dictionary reader looks like
 #   print(row) # {'name': 'alison', 'age': '23', 'id': '10'}
@@ -25,7 +21,7 @@ students_file = csv.DictReader(open("students.csv")) # values in the first row a
 c.execute("CREATE TABLE IF NOT EXISTS students (name TEXT, age INTEGER, id INTEGER);")    # create students table
 for lines in students_file: # loop through each dictionary in reader
     c.execute("INSERT INTO students VALUES(\"" + lines['name'] + "\"," + lines['age'] + "," + lines['id'] + ")") # populate the table by concatenating the variables into the command String
-    # \" is used to signify that lines['name'] is type TEXT
+    # \" is used to signify that lines['name'] is type TEXT- the \ is escape character
 
 courses_file = csv.DictReader(open("courses.csv"))
 c.execute("CREATE TABLE IF NOT EXISTS courses (code TEXT, mark INTEGER, id INTEGER);")    # create courses table
