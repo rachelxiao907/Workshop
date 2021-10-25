@@ -24,7 +24,8 @@ students_file = csv.DictReader(open("students.csv")) # values in the first row a
 # CREATE TABLE IF NOT EXIST bypasses the error of TABLE ALREADY EXISTS
 c.execute("CREATE TABLE IF NOT EXISTS students (name TEXT, age INTEGER, id INTEGER);")    # create students table
 for lines in students_file: # loop through each dictionary in reader
-    c.execute("INSERT INTO students VALUES(\"" + lines['name'] + "\"," + lines['age'] + "," + lines['id'] + ")") # populate the table
+    c.execute("INSERT INTO students VALUES(\"" + lines['name'] + "\"," + lines['age'] + "," + lines['id'] + ")") # populate the table by concatenating the variables into the command String
+    # \" is used to signify that lines['name'] is type TEXT
 
 courses_file = csv.DictReader(open("courses.csv"))
 c.execute("CREATE TABLE IF NOT EXISTS courses (code TEXT, mark INTEGER, id INTEGER);")    # create courses table
