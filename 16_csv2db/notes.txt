@@ -11,6 +11,8 @@ index in the list.
 - References: https://docs.python.org/3/library/csv.html
 
 SQLITE:
+- sqlite <file_name> allows us to create a shell in the terminal that accesses a database. We can
+use .quit to get out of the shell.
 - We learned that the shell displayes ...> when it thinks that we are continuing a line of code. To end code statements, we need to use semicolons.
 - SQL makes it easy to access specific information using column names.
 - It seems like the SQL table is ordering the table by the PRIMARY KEY.
