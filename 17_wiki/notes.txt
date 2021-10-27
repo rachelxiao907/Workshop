@@ -1,0 +1,31 @@
+# Team Marshmallow: Rachel Xiao (Mooana), Liesel Wong (King Hagrid), Yoonah Chang (Yelena)
+# SoftDev
+# K17 -- P00: Half Quick
+# 2021-10-25
+
+Team F^2: 
+- This trio used "INSERT INTO <table> VALUES(?, ?, ?)", and then typed c.execute(command, <value1>, <value2>, <value3>) 
+	- Helps avoid concatenation, which makes the code easier to read
+
+Team Selective Soup: 
+- When reading in the file, they used a with open block
+- f strings make the code easier to read (no concatenation)
+- f"""
+            INSERT INTO courses VALUES
+              ({repr(row['code'])},
+               {row['mark']},
+               {row['id']})
+        """
+  { } allows us to use exactly what's in the brackets
+  The function repr to add quotes around a String variable, making a printable representational string
+
+Team Three Coffee Peanuts: 
+- Added the information into two tables, one for each csv file. 
+- If the table already exists, they'd add to the existing table
+	- If we open the database twice, then there may be duplicate values 
+- If the table did not exist, they'd create a new table
+
+Other Equally Cool Teams: 
+- c.fetchall() was used to access all of the data in the database.
+	- When printing the results of c.fetchall(), it lets us see the content of the tables
+	- The function creates a list for each row
