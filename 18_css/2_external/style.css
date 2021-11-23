@@ -1,0 +1,43 @@
+body {
+  font-family: arial;
+  background-color: rgb(114, 114, 114);
+}
+
+h1 {
+  padding: 4px;
+  text-align: center;
+  color: white;
+  background-color: rgb(202, 202, 202);
+}
+
+.back {
+  background-color: gray;
+  padding: 12px;
+  display: flex;
+}
+
+.navfoo {
+  min-width: 12rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  color:white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer {
+  color: rgb(114, 114, 114);
+  background-color: rgb(92, 92, 92);
+  padding: 10px;
+  text-align: right;
+}
+
+.nomargin {
+  margin: 0;
+}
