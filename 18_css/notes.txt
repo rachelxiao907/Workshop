@@ -1,0 +1,17 @@
+Wandering Wolverine: Rachel Xiao, Wen Hao Dong
+SoftDev pd2
+K18 -- CSS basics
+2021-11-23
+time spent: 1 hour
+
+Lorem ipsum from https://www.lipsum.com/
+
+Child tags inherit the styling of parent tags unless they have default styles that override them.
+For example, header tags have a default margin value so even if a parent tag has
+margin: 0, the header tags will still have the default margins.
+
+To remove the underline on anchor (link) tags, you have to add the property "text-decoration: none;"
+
+Unordered and ordered list tags have a list-style property and a left padding by default.
+
+Flexbox is very convenient for organizing the div containers but how can we make columns without it?
