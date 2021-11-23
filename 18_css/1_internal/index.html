@@ -1,33 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Clyde "Thluffy" Sinclair
-       SoftDev pd0
+  <!-- Wandering Wolverine: Rachel Xiao, Wen Hao Dong
+       SoftDev pd2
        K18 -- CSS basics
-       2021-11-23t
+       2021-11-23
+       time spent: 1 hour
 
-	 WORK FILE for CSS 	
+	 WORK FILE for CSS
     -->
 
   <head>
     <meta charset="utf-8"/>
     <title>foo title</title>
+
+    <style>
+      body {
+        font-family: arial;
+        background-color: rgb(114, 114, 114);
+      }
+
+      h1 {
+        padding: 4px;
+        text-align: center;
+        color: white;
+        background-color: rgb(202, 202, 202);
+      }
+
+      .back {
+        background-color: gray;
+        padding: 12px;
+        display: flex;
+      }
+
+      .navfoo {
+        min-width: 12rem;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      a {
+        color:white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .footer {
+        color: rgb(114, 114, 114);
+        background-color: rgb(92, 92, 92);
+        padding: 10px;
+        text-align: right;
+      }
+
+      .nomargin {
+        margin: 0;
+      }
+    </style>
   </head>
 
   <body>
-    <h1>foo heading 1</h1>
-    <h3>nav foo</h3>
-    <ul>
-      <li><a href="">dis</a></li>
-      <li><a href="">dat</a></li>
-      <li><a href="">de udda ting</a></li>
-    </ul>
-    <h2>main foo heading</h2>
-    <p>tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk 
+    <h1 class="nomargin">foo heading 1</h1>
+    <div class="back nomargin">
+      <div class="navfoo">
+        <h3 class="nomargin">nav foo</h3>
+        <ul>
+          <li><a href="">dis</a></li>
+          <li><a href="">dat</a></li>
+          <li><a href="">de udda ting</a></li>
+        </ul>
+      </div>
 
-      <br>
-      <br>
+      <div>
+        <h2 class="nomargin">main foo heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nisl nisl, convallis non iaculis in, porttitor in ipsum. Ut fringilla aliquet vestibulum. Phasellus ut rhoncus massa. Nullam a placerat lorem, non lobortis dui. Pellentesque lobortis tempor ultricies. Nunc sit amet porttitor nulla. Sed erat ante, sodales et nibh ut, semper suscipit nulla. Ut tincidunt lorem ut felis fringilla molestie. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+          <br>
+          <br>
+          Quisque et purus non lorem consectetur suscipit aliquam sed lectus. Praesent semper viverra nunc, eget dignissim eros. Donec ut ultricies urna, sit amet ultrices diam. Cras nulla quam, egestas in libero nec, mollis maximus dolor. Fusce eget sapien lobortis, cursus turpis dictum, vulputate urna. Phasellus congue pretium sapien eu tincidunt. Sed sit amet ipsum interdum, dictum lacus eget, mattis neque. Nulla suscipit, quam vel lacinia consectetur, orci libero laoreet metus, non malesuada est enim a diam. Nullam id elementum dolor, at faucibus neque. Curabitur lobortis, quam vehicula molestie dictum, mi libero vehicula lacus, in rhoncus ex odio eu mi. Ut tempor magna odio, vel aliquet arcu sodales quis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nec facilisis nibh, sit amet mollis felis.
+        </p>
+      </div>
+    </div>
 
-      Copyright &copy; 2021 Clyde "Thluffy" Sinclair
+    <div class="footer">
+      Copyright &copy; 2021 Rachel Xiao and Wen Hao Dong
+    </div>
 
   </body>
 
