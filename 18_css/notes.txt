@@ -15,3 +15,7 @@ To remove the underline on anchor (link) tags, you have to add the property "tex
 Unordered and ordered list tags have a list-style property and a left padding by default.
 
 Flexbox is very convenient for organizing the div containers but how can we make columns without it?
+
+There exists an article tag.
+
+"flex: <number>" can structure the website to organize the size of sections.
