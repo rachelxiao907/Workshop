@@ -1,0 +1,11 @@
+#Wandering Wolverine: Rachel Xiao, Wen Hao Dong
+SoftDev pd2
+K19 -- A RESTful Journey Skyward
+2021-11-23
+time spent: 45 minutes
+
+When you call .read() on the request object you get from urlopen() twice, the first time gives you
+the JSON data but the second time returns None.
+
+The JSON response is a string that consists of key value pairs that are separated by commas. So, 
+json.loads() can create a dictionary of the string while maintaining the same format.
