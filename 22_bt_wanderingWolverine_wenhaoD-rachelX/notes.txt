@@ -1,0 +1,18 @@
+Wandering Wolverine: Wen Hao Dong, Rachel Xiao
+SoftDev pd2
+K22 -- Who Does Frame Work For?
+2021-11-29
+time spent: 3.5 hours
+
+The meta viewport tag in head makes it so the website is automatically adjusted based on the size of the device.
+
+To style a button, you just add a btn class to the tag and a btn-[type] class to give it a color.
+The button types are: primary, secondary, success, danger, warning, info, light, dark, and link.
+You can also instead add the btn-outline-[type] class for outline buttons instead.
+Adding a btn-lg or btn-sm class will make the button large or small respectively.
+
+A lot of different components interact with one another by giving the id of one component as an
+attribute of another. It acts as a link with a source because they each refer to other elements.
+
+Bootstrap has many classes that has built in CSS which makes the website look very nice. However,
+some of the classes have odd names that are hard to remember.
