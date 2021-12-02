@@ -1,0 +1,29 @@
+Wandering Wolverine: Wen Hao Dong, Rachel Xiao
+SoftDev
+K23: No. 2?
+2021-12-01
+time spent: 1.0 hour
+
+DISCO:
+There is a lot of overlap in what Boostrap and Foundation has to offer in terms of styling,
+though this shouldn't really be a surprise as they are meant to do similar things.
+Foundation has grids which is similar to Bootstrap's column layouts.
+
+QCC:
+Foundation seems more "boxy" compared to Bootstrap, and a little plain by default.
+Bootstrap's default font also looks a bit nicer (though this is completely subjective).
+Foundation's colors seem a little less vibrant compared to Bootstrap's.
+Foundation's classes are much easier to use, however, since they are less verbose compared
+to Bootstrap's.
+
+Q0:
+There wasn't really anything in the on-ramp about how to add margins to the main content of
+the page, since by default it smushes everything to the left edge.
+The CDN included in the on-ramp seems to be outdated, as some of the newer classes
+didn't work.
+
+Q1:
+We prefer Bootstrap because it has better automatic styling than Foundation does. We are
+satisfied with Bootstrap's look without being concerned with the CSS, but Foundation displays
+elements that we want to improve with CSS. For example, cards in Bootstrap are automatically
+sized and has a border while cards in Foundation just looks like text laid out in a certain way.
