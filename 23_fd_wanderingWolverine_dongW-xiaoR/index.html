@@ -1,14 +1,102 @@
 <!DOCTYPE html>
-<html>
+<!--
+Wandering Wolverine: Wen Hao Dong, Rachel Xiao
+SoftDev
+K23: No. 2?
+2021-12-01
+time spent: 1.0 hour
+-->
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Foundation Test</title>
-    <!-- Foundation CSS -->
-    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation</title>
+    <!--<link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css" >-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
   </head>
-
   <body>
+    <!-- Navigation Bar (can be broken into two sections) -->
+    <div class = "top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">Wandering Wolverine: Wen Hao Dong, Rachel Xiao</li>
+        </ul>
+      </div>
+      <div class = "top-bar-right">
+        <ul class = "menu" >
+          <li> <a href="#">Signed in as John Doe: Logout?</a> </li>
+        </ul>
+      </div>
+    </div>
 
+    <div class="callout large primary">
+      <div class="text-center">
+        <h1>Blog of a Lazy Wolverine</h1>
+        <h3>A mock blog about someone who likes being lazy</h3>
+      </div>
+    </div>
+
+    <div class="callout secondary text-center">
+      <h5> <b> Posts! </b> </h5>
+      <a href="#nov3">11/3/19</a><br>
+      <a href="#oct7">10/7/19</a><br>
+      <a href="#oct4">10/4/19</a><br>
+      <a href="#aug22">8/22/19</a>
+    </div>
+
+    <div class="grid-container">
+      <article class="card">
+        <div class="card-divider" id="nov3"> 11/3/19 </div>
+        <div class="card-section">
+          <h4>Lorem ipsum <small>by John Doe</small> </h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, atque voluptas?</p>
+          <div class="small hollow button-group">
+            <button class="primary button">View Comments (6)</button>
+            <button class="warning button">Edit</button>
+            <button class="alert button">Delete</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-divider" id="oct7"> 10/7/19 </div>
+        <img src="https://elements-cover-images-0.imgix.net/ef822d70-cbc3-4f9c-8338-7b607b529599?auto=compress%2Cformat&fit=max&w=2740&s=e47ac2d5b68efd17fe6cbd82d5e40999" alt="food">
+        <div class="card-section" >
+          <h4>Yum yum <small>by John Doe</small> </h4>
+          <p>I had some delicious food delivered to me today. Are y'all jealous?</p>
+          <div class="small hollow button-group">
+            <button class="primary button">View Comments (24)</button>
+            <button class="warning button">Edit</button>
+            <button class="alert button">Delete</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-divider" id="oct4"> 10/4/19 </div>
+        <div class="card-section">
+          <h4>Sleeeeep <small>by John Doe</small> </h4>
+          <p>Today, I slept for over 11 hours! Best day ever!</p>
+          <div class="small hollow button-group">
+            <button class="primary button">View Comments (24)</button>
+            <button class="warning button">Edit</button>
+            <button class="alert button">Delete</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-divider" id="aug22"> 8/22/19 </div>
+        <div class="card-section">
+          <h4>Lorem ipsum <small>by John Doe</small> </h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat consequatur optio ut, culpa natus adipisci impedit itaque! Ducimus ipsa ab ratione laborum, beatae quas?</p>
+          <div class="small hollow button-group">
+            <button class="primary button">View Comments (24)</button>
+            <button class="warning button">Edit</button>
+            <button class="alert button">Delete</button>
+          </div>
+        </div>
+      </article>
+    </div>
   </body>
 </html>
