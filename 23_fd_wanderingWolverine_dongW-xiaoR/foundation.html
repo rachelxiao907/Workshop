@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!--
+Dev-Joes: Liesel Wong (King Hagrid), Austin Ngan (Gerald)
+SoftDev
+K22: Who Does Frame Work For?
+2021-11-22
+-->
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation Test</title>
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css" >
+  </head>
+  <body>
+
+  <h2>Dev-Joes: Austin Ngan, Liesel Wong</h2>
+  <h3> Foundation has many concise and simple ways to display certain items in html </h3>
+
+  <br>
+  
+  <!-- NAVIGATION BAR --> 
+  <h3> <b> Navigation Bar </b> </h3>
+  <h5> is a quick and easy way to peruse a website! In Foundation, there is a top-bar class which is the dark grey section of the screen. Then, the navigation bar is broken into two sections: top-bar-left and top-bar-right. Within each left and right class you can create menus, dropdowns, whatever your heart desires...</h5>
+  <div class = "top-bar">
+   <div class="top-bar-left">
+      <ul class="menu">
+        <li class="menu-text">Top Bar</li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+      </ul>
+    </div>
+    <div class = "top-bar-right"> 
+    <ul class = "menu" >
+      <li> <a href="#">Link 4</a> </li>
+    </ul>
+   </div>
+ </div>
+
+<br> 
+  
+  <!-- GRIDS --> 
+  <h3> <b> Grids </b> </h3>
+  <h4> Grids can display a different amount of elements per row/column based on the size of your window. (resize your window to see for yourself!) Grids make it easier to see a lot of content, and Foundation adjusts for different sized content</h4>
+
+  <br>
+	<div class="row small-up-1 medium-up-3 large-up-5">
+
+            <div class="column">
+              <h5>Grid Entry 1Grid Entry 1Grid Entry 1Grid Entry 1Grid Entry 1Grid Entry 1Grid Entry 1Grid Entry 1Grid Entry 1Grid Entry 1</h5>
+            </div>
+            <div class="column">
+              <h5>Grid Entry 2</h5>
+            </div>
+            <div class="column">
+              <h5>Grid Entry 3</h5>
+            </div>
+            <div class="column">
+              <h5>Grid Entry 4</h5>
+            </div>
+            <div class="column">
+              <h5>Grid Entry 5</h5>
+            </div>
+            <div class="column">
+              <h5>Grid Entry 6</h5>
+            </div>
+            <div class="column">
+              <h5>Grid Entry 7</h5>
+            </div>
+            <div class="column">
+              <h5>Grid Entry 8</h5>
+            </div>
+            <div class="column">
+              <h5>Grid Entry 9</h5>
+            </div>
+            <div class="column">
+              <h5>Grid Entry 10</h5>
+  </div>
+  </div>
+  <br>
+  <h4> Foundation classes like row-small-up-1 means on a smaller screen there will be one column per row, on a larger screen large-up-5 means there will be up to 5 columns in a row</h4>
+
+  <br>
+  <br>
+
+  <!-- BUTTONS --> 
+  <h3> <b> Buttons </b> </h3>
+  <h4> Buttons can be customized based on color, size, and have further customization through Foundation. </h4>
+
+  <button class="submit success button">Save</button>
+	<button type="button" class="alert button">Delete</button>
+  <a class="button small medium-down-expanded" href="#">Smaller Button</a>
+
+  <br> 
+
+  <h4> Don't like solid colors? Try the hollow class... </h4>
+  <button class=" hollow button success"> Save </button>
+  <button type="button" class="hollow warning button">Warning</button>
+  <a class="hollow button small medium-down-expanded" href="#">Smaller Button</a>
+
+  <br> 
+
+  <h4> Buttons can also be grouped in Foundation to have the same attributes. </h4>
+
+  Large Buttons
+  <div class="large button-group">
+    <a class="button">Small</a>
+    <a class="button">Button</a>
+    <a class="button">Group</a>
+  </div>
+
+  Small Buttons
+  <div class="small button-group">
+    <a class="button success "> Success </a>
+    <a class="button warning ">Warning</a>
+    <a class="button alert "> Delete </a>
+  </div>
+
+  <h4> Don't like buttons? Foundation has other clickables avalible...like switches!</h4>
+
+<div class="switch">
+  <input class="switch-input" id="exampleSwitch" type="checkbox" name="exampleSwitch">
+  <label class="switch-paddle" for="exampleSwitch">
+    <span class="switch-active" aria-hidden="true">On</span>
+    <span class="switch-inactive" aria-hidden="true">Off</span>
+  </label>
+</div>
+
+
+  <h3> <b> Cards </b> </h3>
+  <h4> Cards are similar to flexbox containers and can be separated into their own grids. Images can be shown in these grids, and the paragraph in each card can be changed. </h4>
+
+  <div class="row small-up-1 medium-up-2 large-up-3">
+            <div class="column">
+              <div class="card" >
+                <div class="card-divider">
+                  Card Header
+                </div>
+                <img src="assets/blue.png">
+                <div class="card-section">
+                  <h4>This is Card 1</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card" >
+                <div class="card-divider">
+                  Card Header
+                </div>
+                <img src="assets/blue.png">
+                <div class="card-section">
+                  <h4>This is Card 2</h4>
+                  <p>Bacon ipsum dolor amet capicola burgdoggen salami turducken pancetta fatback t-bone. Fatback alcatra buffalo, corned beef doner short loin chicken pork belly. Fatback short loin kevin chuck. Andouille kielbasa t-bone short ribs.</p>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card" >
+                <div class="card-divider">
+                  Card Header
+                </div>
+                <img src="assets/blue.png">
+                <div class="card-section">
+                  <h4>This is Card 3</h4>
+                  <p>Baa potato donkey mouse, at gate grain bins woof. Mallet herbs basil nest, in welding equipment pens quail. Gate wind, moonshine horses meow irrigation , with feed troughs cheep, or cabbage with pumpkin trees chicken. Onion organic oranges and purr ducks canning owls at a squeal. Forage Harvester rakes peacocks. 
+
+                  Peppers at plow basil swather, cat weathervane grain trucks, hoot pony robins peacocks an kale. veterinarian blue berries cattle jelly canning. Haybine carrots soybeans, owls duck raising or, cheep in plows. Quack hammers eggplant is utters nails garden. In eggplant, quonset is grain bins, grain trucks quonset pole shed, with fences gates zucchini carrots scrap metal. Feed in a woof, a farmers market. Bulls a.</p>
+                </div>
+              </div>
+            </div>
+  </div>
+ <h4> They are similar to the row column format in the grids section, except more stylized. Notice the same window resizing attributes of these cards! </h4>
+
+ <br> 
+
+  <h3> <b> Callouts </b> </h3>
+  <h4> Callouts are another type of container similar to cards, whose tinted background can be changed through css. This is helpful for writing a set of instructions</h4>
+
+  <div class="callout secondary">
+    <h5> <b> Primary Callout </b> </h5>
+    <p>HELLO</p>
+    <ul class="">
+        <li class="">ANY CONTENT CAN GO IN HERE</li>
+        <li><a href="#">Paragraphs</a></li>
+        <li><a href="#">Lists/a></li>
+        <li><a href="#">Headings</a></li>
+   </ul>
+   <h6> BYE </h6>
+  </div>
+
+  <div class="callout warning">
+    <h5>THANK YOU CALLOUT</h5>
+    <h6>thanks for following the tutorial!</h6>
+    <h6> we hope you enjoyed...see u soon :) </h6>
+
+  </div>
+
+
+
+  </body>
+</html>
