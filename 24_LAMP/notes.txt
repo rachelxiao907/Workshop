@@ -26,7 +26,11 @@ In the Digital Ocean Console:
           mkdir .ssh
           cd .ssh
           create authorized_keys and paste your ssh key there
-                  
-                  
-Tips:
 - Be in root when adding users
+  https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04
+  - ssh root@your_server_ip
+  - adduser <user>
+  - Make the user a superuser so they can use sudo commands 
+    usermod -aG sudo <user>
+  - User will be prompted to enter information like password or phone numbers (can be left blank)
+  - ssh <user>@<server_ip> for SSH access
