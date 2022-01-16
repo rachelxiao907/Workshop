@@ -1,0 +1,32 @@
+Josephine Lee, Rachel Xiao, Hebe Huang
+SoftDev
+K24 -- Cold LAMPin w Flav
+2022-01-15
+time spent: 2.0 hours
+
+SSH keys
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys
+
+In the Digital Ocean Console:
+- Added users and add them as sudoers: https://www.digitalocean.com/community/tutorials/how-to-create-a-new-sudo-enabled-user-on-ubuntu-18-04-quickstart
+- Install pip: apt install python3-pip
+- Install venv: apt install python3.8-venv
+- Install Flask: pip install Flask
+- Update: sudo apt update
+- Install Apache: https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04
+                  sudo apt install apache2
+                  sudo ufw allow 'Apache'
+- Added ssh keys for each computer that will need to access the droplet:
+    1) Copy your ssh public key from your local computer (github link above) 
+    2) Launch the Droplet console and switch to the user that you will be working as (ie su hebe)
+    3) cd into the root directory: cd ~
+    4) if the .ssh directory exists:
+          cd into .ssh then paste your ssh key into the end of the authorized_keys file
+       if .ssh directory does not exist:
+          mkdir .ssh
+          cd .ssh
+          create authorized_keys and paste your ssh key there
+                  
+                  
+Tips:
+- Be in root when adding users
