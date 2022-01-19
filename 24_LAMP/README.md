@@ -49,7 +49,7 @@ sudo apt-get install traceroute
 ```
 14. Install sqlite3:
 ```
-sudo apt-get install traceroute.
+sudo apt-get install sqlite3
 ```
 15. Install sl:
 ```
