@@ -10,7 +10,7 @@ Flask is not built to serve -- on its own -- persistent or high-traffic sites. A
 - A Digital Ocean Droplet
 
 ## Instructions
-1. Install and Enable mod_wsgi
+1. Install mod_wsgi
    ```
    sudo apt-get install libapache2-mod-wsgi-py3 python-dev
    ```
@@ -36,49 +36,54 @@ Flask is not built to serve -- on its own -- persistent or high-traffic sites. A
    cd FlaskApp
    sudo mkdir static templates
    ```
-   Add the contents of your flask app into __init__.py
+   Create an __init__.py file with your flask app content
    ```
    sudo nano __init__.py
    ```
+   This can be your most basic flask app content
    ```
    from flask import Flask
    app = Flask(__name__)
    @app.route("/")
    def hello():
-   	return "Hello, I hate Digital Ocean!"
+   	return "Hello, Digital Ocean is cool!"
    if __name__ == "__main__":
    	app.run()
    ```
 3. Install Flask
+   > We will use a virtual environment for our flask app
+   Install pip
    ```
    sudo apt-get install python3-pip
    ```
+   Install virtual environment
    ```
    sudo pip3 install virtualenv
    ```
-   replace venv with the name of virtual environment
    ```
-   sudo virtualenv venv
+   sudo virtualenv <venv name>
    ```
+   Activate virtual environment
    ```
-   source venv/bin/activate
+   source <venv name>/bin/activate
    ```
+   Install Flask in virtual environment
    ```
    sudo pip3 install Flask
    ```
-   Test if you installed it
+   Test if Flask is installed by running the app
    ```
    sudo python3 __init__.py
    ```
-4. Configure and enable virtual host (note again that all the FlaskApp -> <your_new_name>)
+4. Configure and Enable a New Virtual Host
+   > Replace FlaskApp with the name of your application
    ```
    sudo nano /etc/apache2/sites-available/FlaskApp.conf
    ```
-   Change mywebsite.com to the IP, and FlaskApp to name of your flask app
    ```
    <VirtualHost *:80>
-		ServerName mywebsite.com
-		ServerAdmin admin@mywebsite.com
+		ServerName <IP address>
+		ServerAdmin admin@<IP address>
 		WSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi
 		<Directory /var/www/FlaskApp/FlaskApp/>
 			Order allow,deny
@@ -94,15 +99,14 @@ Flask is not built to serve -- on its own -- persistent or high-traffic sites. A
 		CustomLog ${APACHE_LOG_DIR}/access.log combined
    </VirtualHost>
    ```
-   Enable Virtual Host
+   Enable virtual host
    ```
    sudo a2ensite FlaskApp
    ```
-5. Create WSGI file
+5. Create .wsgi File
+   > Serves Flask app
    ```
    cd /var/www/FlaskApp
-   ```
-   ```
    sudo nano flaskapp.wsgi
    ```
    ```
@@ -115,11 +119,11 @@ Flask is not built to serve -- on its own -- persistent or high-traffic sites. A
    from FlaskApp import app as application
    application.secret_key = 'Add your secret key'
    ```
-6. Apply changes
+6. Apply Changes by Restarting Apache
    ```
    sudo service apache2 restart
    ```
-You should be able to access your virtual host at your ip address!
+You should be able to access your virtual host at your IP address!
 
 ### Resources
 * https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
