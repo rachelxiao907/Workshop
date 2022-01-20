@@ -1,0 +1,21 @@
+Josephine Lee, Rachel Xiao, Hebe Huang
+SoftDev
+K25 -- Apache, Jump On It
+2022-01-18
+time spent: 
+
+- When cloning the app onto the server, we had to use the HTTPS link because the SSH link stated
+  that we couldn't be authenticated. Not sure what is wrong with the SSH key.
+- Is renaming app.py to __init__.py really important to deploying the Flask app on Apache?
+- Have to install virtual environment and create one with Flask installed on it.
+- sudo nano /etc/apache2/sites-available/FlaskApp.conf
+  Creates a virtual host and .conf file
+- Before enabling the virtual host with sudo a2ensite FlaskApp, we have to run 
+	systemctl reload apache2
+- When creating the the wsgi file, we had to do 
+	touch flaskapp.wsgi
+  before going to chmod +x flaskapp.wsgi
+- When restarting the apache server, we ran into an error that said "Job for apache2.service failed
+  because the control process exited with error code"
+- We noticed that something was wrong with our Apache, so we rebuilt the server and set up
+  everything again
