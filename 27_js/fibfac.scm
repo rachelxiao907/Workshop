@@ -1,4 +1,4 @@
-; Rachel Xiao, Yuqing Wu
+; Team OdinRachel Xiao, Yuqing Wu
 ; SoftDev
 ; K27 -- Where Does JS Live?
 ; 2022-02-04
@@ -12,7 +12,7 @@
   (lambda (n)
     (if (<= n 1)
         1
-        (* n (fact (- n 1)))\
+        (* n (fact (- n 1)))
         )
     )
   )

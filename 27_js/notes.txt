@@ -1,18 +1,23 @@
-Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-SoftDev pd0
+Team Odin :: Rachel Xiao, Yuqing Wu
+SoftDev pd2
 K27 -- Basic functions in JavaScript
-2022-02-03r
+2022-02-04
 
 DISCO
 -----------------------------------------------------------------
-* Ooooh, ___
-* Aaah-haa!  ____...
+* var fxnName = function(args) {
+	body;
+  };
+* var fxnName = (args) => {
+	body;
+  };
 =================================================================
 
 QCC
 -----------------------------------------------------------------
-* Why...?
-* Huh?
-* Whuh now?
+* How does the dev console run the JS?
+* Can we only run JS on the browser? Can we do it on the terminal?
+* Why does JS have two ways of making functions?
+* What does the => mean in creating a function?
 =================================================================
 
