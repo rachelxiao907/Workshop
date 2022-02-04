@@ -19,5 +19,6 @@ QCC
 * Can we only run JS on the browser? Can we do it on the terminal?
 * Why does JS have two ways of making functions?
 * What does the => mean in creating a function?
+* How can we call JS functions from a separate file in HTML?
 =================================================================
 
