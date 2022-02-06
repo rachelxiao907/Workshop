@@ -12,6 +12,9 @@
 
 //Do whatever you think is needed. Think: S I M P L E.   Think: S M A R T.
 var fact = (n) => {
+  if (n < 0) {
+    return "invalid";
+  }
   if (n <= 1) { //base case
    return 1;
   } else {
@@ -20,6 +23,9 @@ var fact = (n) => {
 };
 
 var fib = (n) => {
+  if (n < 0) {
+    return "invalid";
+  }
   if (n <= 1) { //base case
    return n;
   } else {
