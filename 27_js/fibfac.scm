@@ -1,4 +1,4 @@
-; Team OdinRachel Xiao, Yuqing Wu
+; Team Odin: Rachel Xiao, Yuqing Wu
 ; SoftDev
 ; K27 -- Where Does JS Live?
 ; 2022-02-04

@@ -11,6 +11,14 @@ DISCO
 * var fxnName = (args) => {
 	body;
   };
+* There is apparently a third way we didn't go over
+  function fxnName(args) {
+  	body;
+  }
+* JS looks like Java. Uses // for comments, semicolons, and {} 
+  for body
+* uses var to create variables but we don't need to declare a
+  type like in Python
 =================================================================
 
 QCC
