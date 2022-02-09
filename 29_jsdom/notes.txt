@@ -1,0 +1,7 @@
+Fire Extinguisher :: Jesse Xie (Polly), Rachel Xiao (Mooana)
+SoftDev pd2
+K29 -- DOMfoolery++
+2022-02-09w
+
+* .addEventListener(event, function() { body; } );
+  Calls function without the event occurring when you refer to fxnName
