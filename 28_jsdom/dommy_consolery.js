@@ -103,7 +103,7 @@ var gcd = function(a,b) {
     r = a % b;
   }
   return b;
-}
+};
 
 addItem("fib(10): "+fib(10));
 addItem("fact(5): "+fact(5));
