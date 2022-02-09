@@ -69,39 +69,40 @@ var stripe = function() {
 //insert your implementations here for...
 // FIB
 
-var fib = (n) =>{
-  if (n<=1){
+var fib = (n) => {
+  if (n <= 1) {
    return n;
-  }else{
+  } else {
    return fib(n-1) +  fib(n-2);
   }
 };
 
 // FAC
 
-var fact = (n) =>{
-  if (n<=1){
+var fact = (n) => {
+  if (n <= 1 ) {
    return 1;
-  }else{
+  } else {
    return fact(n-1) *  n;
   }
 };
 
 // GCD
 
-var gcd = function(a,b){
-  var divisor = a;
-  var dividend = b;
-  if(a>b){
-    dividend = a;
-    divisor = b;
+var gcd = function(a,b) {
+  if (a == 0) return b;
+  if (a < b) {
+    var c = a;
+    a = b;
+    b = c;
   }
-  while(divisor != 0){
-    var rem = dividend % divisor;
-    dividend = divisor;
-    divisor = rem;
+  var r = a % b;
+  while (r != 0) {
+    a = b;
+    b = r;
+    r = a % b;
   }
-  return dividend;
+  return b;
 }
 
 addItem("fib(10): "+fib(10));
