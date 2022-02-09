@@ -1,12 +1,26 @@
+Team Odin :: Yuqing Wu, Rachel Xiao
+SoftDev pd2
+K28 -- Manipulating the DOM
+2022-02-08t
+
+DEV CONSOLE:
 * For every new statements we put in the dev console, the dev console has all of
   the code statements stored because ENVIRONMENT
+* We can use the tab and arrow keys in dev console!
+* SHIFT + ENTER would create a new line for code instead of letting the code run.
+
+JS:
 * We can have a function as a key-value pair in a dictionary
   ex: o["func"](3)
       o["func"] accesses the function which is the value of the key "func"
       3 is the parameter
- * A dictionary is an object so there are many built in functions in JS for it
+* A dictionary is an object so there are many built in functions in JS for it
    like toString
    ex: o["toString"]() -> [object Object]
-  	* We can rewrite these default functions by creating a new key-value pair
+  	* We can overwrite these default functions by creating a new key-value pair
   	  with the same function name in the dictionary
-   
+    * We can also modify the function to let it set the values / add a key value pair to dictionary by just setting o[<key>] = <value>.
+
+* We can use getElementById or getElementByTagName to indicate the different html texts, getElementById seems to get the first item with that Id, while getElementByTagName returns a dictionary with indices as keys and the objects as values.
+* When appending to the ordered list in html we can see how li is treated like an object with its own key value pairs.
+* Classes are after the . of the objects. The first class takes priority.
