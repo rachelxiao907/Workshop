@@ -5,3 +5,4 @@ K29 -- DOMfoolery++
 
 * .addEventListener(event, function() { body; } );
   Calls function without the event occurring when you refer to fxnName
+ * All HTML code should be places before the script tag that links the JS file
