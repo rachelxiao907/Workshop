@@ -100,7 +100,15 @@ var gcd = function(a,b) {
 b1 = document.getElementById("b1");
 b1.addEventListener("click", function() {
                                addItem("fib(10): "+fib(10));
+                             }
+                   );
+b2 = document.getElementById("b2");
+b2.addEventListener("click", function() {
                                addItem("fact(5): "+fact(5));
+                             }
+                   );
+b3 = document.getElementById("b3");
+b3.addEventListener("click", function() {
                                addItem("gcd (36,10): "+gcd(36,10));
                              }
                    );
