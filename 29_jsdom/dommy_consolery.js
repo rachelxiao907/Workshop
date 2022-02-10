@@ -95,11 +95,26 @@ var gcd = function(a,b) {
   else return gcd(b, a % b);
 };
 
-
+var index = function(text) {
+  var listitems = document.getElementsByTagName('li');
+  for(var i = 0; i < items.length; i++) {
+    if (items[i] == text) {
+      return i;
+    }
+  }
+  return -1;
+};
 
 b1 = document.getElementById("b1");
 b1.addEventListener("click", function() {
-                               addItem("fib(10): "+fib(10));
+                               var content = "fib(10): "+fib(10);
+                               if (b1.getAttribute("class") == "clicked") {
+                                 removeItem(index(content));
+                                 b1.removeAttribute("class");
+                               } else {
+                                 addItem(content);
+                                 b1.setAtttribute("class", "clicked");
+                               }
                              }
                    );
 b2 = document.getElementById("b2");

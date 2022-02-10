@@ -6,3 +6,6 @@ K29 -- DOMfoolery++
 * .addEventListener(event, function() { body; } );
   Calls function without the event occurring when you refer to fxnName
  * All HTML code should be places before the script tag that links the JS file
+ * We know that element.appendChild() can be used on body, div, block, and lists tags
+ * To appendChild and add something to the HTML, we have to first
+ createElement("tag name"), edit its innerHTML, and maybe setAttribute
