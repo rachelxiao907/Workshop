@@ -18,6 +18,7 @@ createElement("tag name"), edit its innerHTML, and maybe setAttribute
     ::marker
     "fact(5): 120"
   </li>
+	- NEVERMIND! We just had to use .innerHTML to compare it with text
 
 Commands:
 document.getElementById()

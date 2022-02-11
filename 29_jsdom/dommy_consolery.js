@@ -99,21 +99,11 @@ var gcd = function(a,b) {
 var index = function(text) {
   var listitems = document.getElementsByTagName('li');
   for(var i = 0; i < listitems.length; i++) {
-    if (listitems[i] == text) { //i think something is wrong with this
+    if (listitems[i].innerHTML == text) { //i think something is wrong with this
       return i;
     }
   }
   return -1;
-};
-
-var toggle = function(content) {
-  if (b1.getAttribute("class") != "clicked") {
-    addItem(content);
-    b1.setAttribute("class", "clicked");
-  } else {
-    console.log(index(content));
-    b1.removeAttribute("class");
-  }
 };
 
 var pie = function() {
@@ -124,12 +114,19 @@ var pie = function() {
 };
 
 b1 = document.getElementById("b1");
-b1.addEventListener("click", function() {
-                               var div1 = document.createElement("div");
-                               div1.innerHTML = "Here is fib 10!";
-                               document.body.appendChild(div1);
-                               div1.setAttribute("class", "purple");
-                               addItem("fib(10): "+fib(10));
+b1.addEventListener("click", function() { //toggling the text displayed
+                               var content = "fib(10): "+fib(10);
+                               if (b1.getAttribute("class") == "clicked") {
+                                 removeItem(index(content));
+                                 b1.removeAttribute("class");
+                               } else {
+                                 addItem(content);
+                                 b1.setAttribute("class", "clicked");
+                               }
+                               // var div1 = document.createElement("div");
+                               // div1.innerHTML = "Here is fib 10!";
+                               // document.body.appendChild(div1);
+                               // div1.setAttribute("class", "purple");
                              }
                    );
 b2 = document.getElementById("b2");
@@ -137,7 +134,7 @@ b2.addEventListener("click", function() {
                                addItem("fact(5): "+fact(5));
                                div3 = document.getElementById("div3");
                                div3.innerHTML = "Here is fact 5!";
-                               div3.setAttribute("class", "green");
+                               div3.setAttribute("class", "purple");
                              }
                    );
 b3 = document.getElementById("b3");
