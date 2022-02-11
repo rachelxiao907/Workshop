@@ -95,31 +95,49 @@ var gcd = function(a,b) {
   else return gcd(b, a % b);
 };
 
+// K29 -- DOMfoolery++
 var index = function(text) {
   var listitems = document.getElementsByTagName('li');
-  for(var i = 0; i < items.length; i++) {
-    if (items[i] == text) {
+  for(var i = 0; i < listitems.length; i++) {
+    if (listitems[i] == text) { //i think something is wrong with this
       return i;
     }
   }
   return -1;
 };
 
+var toggle = function(content) {
+  if (b1.getAttribute("class") != "clicked") {
+    addItem(content);
+    b1.setAttribute("class", "clicked");
+  } else {
+    console.log(index(content));
+    b1.removeAttribute("class");
+  }
+};
+
+var pie = function() {
+  var orange = document.createElement("h1");
+  orange.innerHTML = "blueberry pie";
+  orange.setAttribute("class", "orange");
+  document.body.appendChild(orange);
+};
+
 b1 = document.getElementById("b1");
 b1.addEventListener("click", function() {
-                               var content = "fib(10): "+fib(10);
-                               if (b1.getAttribute("class") == "clicked") {
-                                 removeItem(index(content));
-                                 b1.removeAttribute("class");
-                               } else {
-                                 addItem(content);
-                                 b1.setAtttribute("class", "clicked");
-                               }
+                               var div1 = document.createElement("div");
+                               div1.innerHTML = "Here is fib 10!";
+                               document.body.appendChild(div1);
+                               div1.setAttribute("class", "purple");
+                               addItem("fib(10): "+fib(10));
                              }
                    );
 b2 = document.getElementById("b2");
 b2.addEventListener("click", function() {
                                addItem("fact(5): "+fact(5));
+                               div3 = document.getElementById("div3");
+                               div3.innerHTML = "Here is fact 5!";
+                               div3.setAttribute("class", "green");
                              }
                    );
 b3 = document.getElementById("b3");
@@ -127,3 +145,5 @@ b3.addEventListener("click", function() {
                                addItem("gcd (36,10): "+gcd(36,10));
                              }
                    );
+b4 = document.getElementById("b4");
+b4.addEventListener("click", pie);

@@ -4,8 +4,29 @@ K29 -- DOMfoolery++
 2022-02-09w
 
 * .addEventListener(event, function() { body; } );
-  Calls function without the event occurring when you refer to fxnName
- * All HTML code should be places before the script tag that links the JS file
- * We know that element.appendChild() can be used on body, div, block, and lists tags
- * To appendChild and add something to the HTML, we have to first
- createElement("tag name"), edit its innerHTML, and maybe setAttribute
+  Calls function without the event occurring when you refer to fxnName()
+	- ACTUALLY, it works when you only write fxnName without the parenthesis if there are
+	  no parameters
+* All HTML code should be places before the script tag that links the JS file
+	- Must link JS at the end of the HTML file
+* We know that element.appendChild() can be used on body, div, block, and lists tags
+	- appendchild() can append directly to the body of the html by using document.body
+* To appendChild and add something to the HTML, we have to first
+createElement("tag name"), edit its innerHTML, and maybe setAttribute
+* When accessing a list item, is there a way to only get the text without the HTML tag?
+  <li>
+    ::marker
+    "fact(5): 120"
+  </li>
+
+Commands:
+document.getElementById()
+document.getElementsByTagName()
+document.getElementsByClassName()
+.addEventListener(event, function() {})
+document.createElement(HTML TAG)
+element.setAttribute(name, value)
+element.getAttribute(name)
+element.remove()
+element.innerHTML
+element.appendChild()
