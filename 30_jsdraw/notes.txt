@@ -1,0 +1,28 @@
+Team Odin :: Yuqing Wu, Rachel Xiao
+SoftDev pd2
+K30 -- JS Draw with Canvas
+2022-02-14m
+
+* <canvas> is an HTML element which can be used to draw graphics via scripting (usually JavaScript)
+	- can make 2D shapes
+* offsetX and offsetY are read-only properties of the MouseEvent
+* ctx.arc(x, y, radius, startAngle, endAngle [, counterclockwise]);
+	- x, y is the center
+	- start angle can be 0 and end angle can be 2pi to draw the whole circle
+
+TOOLBOX:
+clearRect()
+getElementById()
+addEventListener()
+fillStyle()
+strokeStyle()
+fillText()
+beginPath()
+arc()
+fill()
+stroke()
+Math.PI
+offsetX
+offsetY
+clientWidth
+clientHeight
