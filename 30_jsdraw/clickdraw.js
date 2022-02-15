@@ -1,6 +1,6 @@
 // Team Odin :: Yuqing Wu, Rachel Xiao
 // SoftDev pd2
-// K30 -- JS Draw with Canvas
+// K30 -- JS Paint
 // 2022-02-14m
 
 //retrieve node in DOM via ID
