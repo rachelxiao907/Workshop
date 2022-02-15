@@ -17,7 +17,7 @@ var stopButton = document.getElementById('buttonStop');
 var ctx = c.getContext('2d');
 
 //set fill color to team color
-ctx.fillStyle = "blue";
+ctx.fillStyle = "skyblue";
 
 var requestID;  //init global var for use with animation frames
 
