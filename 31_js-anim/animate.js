@@ -17,7 +17,7 @@ var stopButton = document.getElementById('buttonStop');
 var ctx = c.getContext('2d');
 
 //set fill color to team color
-ctx.fillStyle = "blue"; // YOUR CODE HERE
+ctx.fillStyle = "blue";
 
 var requestID;  //init global var for use with animation frames
 
@@ -25,8 +25,7 @@ var requestID;  //init global var for use with animation frames
 //var clear = function(e) {
 var clear = (e) => {
   console.log("clear invoked...")
-
-  // YOUR CODE HERE
+  ctx.clearRect(0, 0, c.clientWidth , c.clientHeight);
 };
 
 
@@ -36,15 +35,40 @@ var growing = true;
 
 //var drawDot = function() {
 var drawDot = () => {
+  clear();
   console.log("drawDot invoked...")
-  var mouseX = 250;
-  var mouseY = 250;
+  //start drawing circle from the center
+  var mouseX = c.clientWidth / 2;
+  var mouseY = c.clientHeight / 2;
   console.log("mouseClick registered at ", mouseX, mouseY);
+
+  //draw circle
   ctx.strokeStyle = "black";
   ctx.beginPath();
-  ctx.arc(mouseX, mouseY, 50, 0, 2*Math.PI);
+  ctx.arc(mouseX, mouseY, radius, 0, 2*Math.PI);
   ctx.fill();
   ctx.stroke();
+
+  //circle shouldn't be drawn outside of the bounds of the canvas
+  //circle will start getting smaller when it hits the edges
+  if (radius == Math.min(c.clientWidth, c.clientHeight) / 2) {
+    growing = false;
+  }
+  //circle will get bigger if it is at its smallest
+  if (radius == 0) {
+    growing = true;
+  }
+
+  // YOUR CODE HERE
+  if (growing) {
+    radius++;
+  } else {
+    radius--;
+  }
+
+  // YOUR CODE HERE
+
+  requestID = window.requestAnimationFrame(drawDot);
 
   /*
     ...to
@@ -63,8 +87,8 @@ var drawDot = () => {
 var stopIt = () => {
   console.log("stopIt invoked...")
   console.log( requestID );
+  window.cancelAnimationFrame(requestID);
 
-  // YOUR CODE HERE
   /*
     ...to
     Stop the animation
