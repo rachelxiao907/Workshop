@@ -31,6 +31,7 @@ var clear = (e) => {
 
 var radius = 0;
 var growing = true;
+var clicked = false; //idk if this is right but it tracks if dotButton was clicked
 
 
 //var drawDot = function() {
@@ -59,14 +60,11 @@ var drawDot = () => {
     growing = true;
   }
 
-  // YOUR CODE HERE
   if (growing) {
     radius++;
   } else {
     radius--;
   }
-
-  // YOUR CODE HERE
 
   requestID = window.requestAnimationFrame(drawDot);
 
@@ -98,5 +96,13 @@ var stopIt = () => {
 };
 
 
-dotButton.addEventListener( "click", drawDot );
-stopButton.addEventListener( "click",  stopIt );
+dotButton.addEventListener( "click", function() {
+                                        if (!clicked) {
+                                          clicked = true;
+                                          drawDot();
+                                        }
+                                      } );
+stopButton.addEventListener( "click",  function() {
+                                          clicked = false;
+                                          stopIt();
+                                        } );
