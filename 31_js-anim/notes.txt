@@ -3,3 +3,10 @@ SoftDev pd2
 K31 -- Paint Paint Paint...
 2022-02-15t
 
+* window.requestAnimationFrame(callback)
+	- callback is the function to call when it's time to update the animation
+	  for the next repaint
+	- returns an integer value (the request ID) that uniquely identifies the
+	  entry in the callback list --> seems like it increases by 1 every call
+* window.cancelAnimationFrame(requestID)
+	- passing in request ID cancels the refresh callback request
