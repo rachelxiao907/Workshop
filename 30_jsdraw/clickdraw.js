@@ -13,13 +13,14 @@ var ctx = c.getContext("2d");
 var mode = "rect";
 
 var toggleMode = (e) => {
-  console.log("toggling..." + mode);
+  console.log("toggling...");
   if (mode == "rect") {
     mode = "circle";
   }
   else {
     mode = "rect";
   }
+  console.log(mode);
 }
 
 var drawRect = function(e) {
@@ -47,11 +48,13 @@ var draw = function(e) {
   else {
     drawCircle(e);
   }
+  console.log("drew shape");
 }
 
 //var wipeCanvas = () => {}
 var wipeCanvas = function() {
   ctx.clearRect(0, 0, c.clientWidth, c.clientHeight);
+  console.log("wiped");
 }
 
 c.addEventListener('click', draw);
