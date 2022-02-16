@@ -47,6 +47,7 @@ var drawDot = () => {
    */
   clear(); //wipe canvas
   stopIt(); //to propagate your animations, you must pop off existing frames from the stack
+            //cancelAnimationFrame first to make sure there is one animation frame running
   console.log("drawDot invoked...")
   //start drawing circle from the center
   var mouseX = c.clientWidth / 2;
@@ -76,7 +77,7 @@ var drawDot = () => {
     radius--;
   }
 
-  requestID = window.requestAnimationFrame(drawDot); //and provide a callback to continue
+  requestID = window.requestAnimationFrame(drawDot); //and provide a callback to continue animating
 };
 
 
