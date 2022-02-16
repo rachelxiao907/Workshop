@@ -31,19 +31,29 @@ var clear = (e) => {
 
 var radius = 0;
 var growing = true;
-var clicked = false; //idk if this is right but it tracks if dotButton was clicked
 
 
 //var drawDot = function() {
 var drawDot = () => {
-  clear();
+  /*
+    ...to
+    Wipe the canvas,
+    Repaint the circle,
+    ...and somewhere (where/when is the right time?)
+    Update requestID to propagate the animation.
+    You will need
+    window.cancelAnimationFrame()
+    window.requestAnimationFrame()
+   */
+  clear(); //wipe canvas
+  stopIt(); //to propagate your animations, you must pop off existing frames from the stack
   console.log("drawDot invoked...")
   //start drawing circle from the center
   var mouseX = c.clientWidth / 2;
   var mouseY = c.clientHeight / 2;
   console.log("mouseClick registered at ", mouseX, mouseY);
 
-  //draw circle
+  //repaint circle
   ctx.strokeStyle = "black";
   ctx.beginPath();
   ctx.arc(mouseX, mouseY, radius, 0, 2*Math.PI);
@@ -66,43 +76,23 @@ var drawDot = () => {
     radius--;
   }
 
-  requestID = window.requestAnimationFrame(drawDot);
-
-  /*
-    ...to
-    Wipe the canvas,
-    Repaint the circle,
-    ...and somewhere (where/when is the right time?)
-    Update requestID to propagate the animation.
-    You will need
-    window.cancelAnimationFrame()
-    window.requestAnimationFrame()
-   */
+  requestID = window.requestAnimationFrame(drawDot); //and provide a callback to continue
 };
 
 
 //var stopIt = function() {
 var stopIt = () => {
-  console.log("stopIt invoked...")
-  console.log( requestID );
-  window.cancelAnimationFrame(requestID);
-
   /*
     ...to
     Stop the animation
     You will need
     window.cancelAnimationFrame()
   */
+  console.log("stopIt invoked...")
+  console.log( requestID );
+  window.cancelAnimationFrame(requestID);
 };
 
 
-dotButton.addEventListener( "click", function() {
-                                        if (!clicked) {
-                                          clicked = true;
-                                          drawDot();
-                                        }
-                                      } );
-stopButton.addEventListener( "click",  function() {
-                                          clicked = false;
-                                          stopIt();
-                                        } );
+dotButton.addEventListener( "click", drawDot );
+stopButton.addEventListener( "click",  stopIt );

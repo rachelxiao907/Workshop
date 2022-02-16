@@ -10,3 +10,6 @@ K31 -- Paint Paint Paint...
 	  entry in the callback list --> seems like it increases by 1 every call
 * window.cancelAnimationFrame(requestID)
 	- passing in request ID cancels the refresh callback request
+	- used to pop off existing frames from the stack
+	- stops the animation from running
+	- helps us prevent user from calling the animation too many times
