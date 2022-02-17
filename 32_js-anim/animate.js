@@ -79,12 +79,14 @@ var drawDot = () => {
   }
 
   requestID = window.requestAnimationFrame(drawDot); //and provide a callback to continue animating
+
+  cont = true;
 };
 
 
-var down = true;
+var down = true; //default direction is down right
 var right = true;
-var cont = false;
+var cont = false; //tracks whether to have image placed at a new location or continue where it left off
 // placed outside of drawDVD because the x and y should not be randomized each call,
 // allowing animation to continue from where it left
 var width = 100;
@@ -147,22 +149,18 @@ var stopIt = () => {
   console.log("stopIt invoked...")
   console.log( requestID );
   window.cancelAnimationFrame(requestID);
+  cont = true;
 };
 
 
-dotButton.addEventListener( "click", function() {
-                                      cont = true;
-                                      drawDot();
-} );
+dotButton.addEventListener( "click", drawDot );
 dvdButton.addEventListener( "click",  function() {
                                         if (!cont) {
                                           x = Math.floor(Math.random() * (c.clientWidth - width));
                                           y = Math.floor(Math.random() * (c.clientHeight - height));
                                           console.log("random location");
                                         }
+                                        cont = false; //consecutive clicks means image starts at new location
                                         drawDVD();
 } );
-stopButton.addEventListener( "click",  function() {
-                                        cont = true;
-                                        stopIt();
-} );
+stopButton.addEventListener( "click", stopIt );
