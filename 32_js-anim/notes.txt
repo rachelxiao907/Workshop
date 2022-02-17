@@ -4,7 +4,7 @@ K32 -- More Moving Parts
 2022-02-17r
 
 * Animation continues where it left off
-* DVD starts in a random spot
+* DVD starts in a random spot when dvd button is clicked consecutively
 * DVD goes down right
 * The x and y of an image is the top left corner of the drawing
 * Math.random() works the same in Java
