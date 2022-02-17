@@ -1,0 +1,4 @@
+* animation continues where it left off
+* DVD starts in a random spot
+* DVD goes down right
+* the x and y of the image is based on the left most corner of the drawing
