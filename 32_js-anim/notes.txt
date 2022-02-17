@@ -7,3 +7,13 @@ K32 -- More Moving Parts
 * DVD starts in a random spot
 * DVD goes down right
 * The x and y of an image is the top left corner of the drawing
+* Math.random() works the same in Java
+* Math.floor() returns the largest integer less than or equal to a given number
+* var IMAGE_OBJ = new Image(width, height); //for some reason, the width and height
+					 	didn't affect the actual image here
+* IMAGE_OBJ.src = "IMAGE_LINK"; 
+* CANVAS_CONTEXT.drawImage(IMAGE_OBJ, x, y, width, height); //the width and height 
+								registers here
+							      //x and y coordinates is the
+							      	top left corner of the image
+
