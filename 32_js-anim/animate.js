@@ -1,4 +1,4 @@
-// Team Odin :: Yuqing Wu, Rachel Xiao
+// Team Player :: Qina Liu, Rachel Xiao
 // SoftDev pd2
 // K32 -- More Moving Parts
 // 2022-02-17r
@@ -81,20 +81,54 @@ var drawDot = () => {
   requestID = window.requestAnimationFrame(drawDot); //and provide a callback to continue animating
 };
 
+var down = true;
+var right = true;
+// placed outside of drawDVD because the x and y should not be randomized each call,
+// allowing animation to continue from where it left
+var width = 100;
+var height = 50;
+var x = Math.floor(Math.random() * (c.clientWidth - width));
+var y = Math.floor(Math.random() * (c.clientHeight - height));
+
+/*
+TO DO:
+when dvd button is pressed, (i think this was in the demo but my memory is kinda failing me),
+instead of dvd being placed at randomly and animation restarting, nothing happens, the animation continues on
+*/
 
 var drawDVD = () => {
   clear();
   stopIt();
   console.log("drawDVD invoked...");
-  var width = 100;
-  var height = 50;
-  var x = Math.floor(Math.random() * (c.clientWidth - width));
-  var y = Math.floor(Math.random() * (c.clientHeight - height));
-  console.log("mouseClick registered at ", x, y);
+  console.log("dvd registered at ", x, y);
 
   var dvdImage = new Image();
   dvdImage.src = "logo_dvd.jpg";
   ctx.drawImage(dvdImage, x, y, width, height);
+
+  // dvd hit right side and bounces to move to left
+  if (x === c.clientWidth - width){
+    right = false;
+  }
+  // dvd hit left side and bounces to move to right
+  if (x === 0){
+    right = true;
+  }
+  // dvd hit bottom side and bounces to move up
+  if (y === c.clientHeight - height){
+    down = false;
+  }
+  // dvd hit up side and bounces to move down
+  if (y === 0){
+    down = true;
+  }
+
+  if (down) { y++; } // dvd goes down, down is upward y
+  else { y--; } // dvd goes up
+  if (right) { x++; } // dvd goes to right
+  else { x --; } // dvd goes to left
+
+  requestID = window.requestAnimationFrame(drawDVD);
 }
 
 

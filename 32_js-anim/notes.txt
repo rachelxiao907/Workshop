@@ -1,4 +1,9 @@
-* animation continues where it left off
+Team Player :: Qina Liu, Rachel Xiao
+SoftDev pd2
+K32 -- More Moving Parts
+2022-02-17r
+
+* Animation continues where it left off
 * DVD starts in a random spot
 * DVD goes down right
-* the x and y of the image is based on the left most corner of the drawing
+* The x and y of an image is the top left corner of the drawing
