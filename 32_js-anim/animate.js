@@ -156,6 +156,8 @@ var stopIt = () => {
 dotButton.addEventListener( "click", drawDot );
 dvdButton.addEventListener( "click",  function() {
                                         if (!cont) {
+                                          down = true; // start direction is down right
+                                          right = true;
                                           x = Math.floor(Math.random() * (c.clientWidth - width));
                                           y = Math.floor(Math.random() * (c.clientHeight - height));
                                           console.log("random location");
