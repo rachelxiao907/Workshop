@@ -1,0 +1,15 @@
+Rachel Xiao
+SoftDev
+K34 -- Another DB Perspective (intro)
+2022-04-26
+time spent: 0.5 hours
+
+- data modeling with MongoDB allows you to improve the application and data model at the same time
+- da†a model is defined at the application level
+- steps
+    1. evaluate the application workload (data size, operations, database indexes)
+    2. map out entities and their relationships (should we link or embed data?)
+    3. finalize the data model for each collection
+- linked relationships = one-to-one, one-to-many, many-to-many lets you refer to info from other data sets (ex: application that has users has links to their data)
+- embed means putting more data within a certain set of data
+- schema versioning pattern (resolves the problem have reading different formats/versions of data)
