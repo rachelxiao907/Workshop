@@ -1,0 +1,18 @@
+Rachel Xiao
+SoftDev
+K35 -- Another DB Perspective (ch 1)
+2022-04-27
+time spent: 0.75 hours
+
+- The MongoDB Database doesn't use related tables of data (SQL does) to store and access data
+    - stores data in an organized way, but NOT in rows or columns
+    - NoSQL documentDB --> data is stored as documents (stores data as a set of field-value pairs)
+	- a field is a unique identifier for a specific datapoint (must have a value)
+    - documents are stored in collections of of documents
+- MongoDB Atlas users can deploy clusters (groups of servers that store your data)
+- Atlas is a MongoDB service that can work with any database
+    - these servers are configured in a replica set (a few connected MongoDB instances or machine that store the same data)
+	- ensures that data will remain will remain intact even if something happens to one of the machinese 
+    - instance: a single machine locally or in the cloud, running a certain software (ex: MongoDB Database run in the cloud)
+    - Services: cluster creation, run and maintain database deployment
+- password: m001-mongodb-basics
