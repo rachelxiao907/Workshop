@@ -1,0 +1,28 @@
+Rachel Xiao
+SoftDev
+K36 -- Another DB Perspective (ch 2)
+2022-04-27
+time spent: 0.75 hours
+
+- MongoDB storing data with documents: work with JSON in documents
+    - start and end with {}
+    - separate each key and value with a colon :
+    - separate each key:value pair with a comma ,
+    - "keys" or "fields" must be surrounded by quotation marks ""
+- MongoDB addressed drawbacks in JSON by storing data in memory using BSON
+    - binary representation to store data in JSON format
+    - optimizes speed, space, and flexibility
+- Data is stored in BSON, but viewed in JSOn
+- JSON: (import or export data from JSON)
+    - mongoexport --uri "<Atlas Cluster URI>"
+		  --collection=<collection name>
+		  --out=<filename>.json
+      makes a copy of the data outside of the Atlas cluster
+    - mongoimport --uri "<Atlas Cluster URI>"
+		  --drop=<filename>.json
+      adds a collection to the Atlas cluster
+- BSON:
+    - export data: mongodump --uri "<Atlas Cluster URI>"
+    - import data: mongorestore --uri "<Atlas Cluster URI>"
+				--drop dump
+- Namespaces = concatenation of the collection and database name (separated by a period . )
