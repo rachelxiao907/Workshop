@@ -11,5 +11,9 @@ time spent: 0.5 hours
     2. map out entities and their relationships (should we link or embed data?)
     3. finalize the data model for each collection
 - linked relationships = one-to-one, one-to-many, many-to-many lets you refer to info from other data sets (ex: application that has users has links to their data)
+    - many to many relationships can contain arrays with the unique ids of the other linked thing
 - embed means putting more data within a certain set of data
+    - you can embed stuff when it's 1 to 1 or 1 to many
 - schema versioning pattern (resolves the problem have reading different formats/versions of data)
+- Bucket pattern: put small, related data items inside a specific element
+- Computed pattern: precompute important numbers

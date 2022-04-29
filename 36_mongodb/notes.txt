@@ -26,3 +26,13 @@ time spent: 0.75 hours
     - import data: mongorestore --uri "<Atlas Cluster URI>"
 				--drop dump
 - Namespaces = concatenation of the collection and database name (separated by a period . )
+- Find Command
+    - work with a certain database (ex: use sample_training)
+    - show collections
+     - db.<collection_name>.find( {"key": value } )
+	- don't have to specify the database name
+- it (iterates through a cursor, which is a pointer to the result set of a query) 
+- db.zips.find(<query>).count()
+    - returns the number of documents that match the given query
+- db.zips.find({<query>).pretty()
+    - each key-value pair is on their own line
