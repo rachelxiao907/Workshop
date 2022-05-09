@@ -1,0 +1,32 @@
+Rachel Xiao
+SoftDev
+K38 -- Another DB Perspective (ch 4)
+2022-05-09
+time spent: 1.8 hours
+
+QUERY OPERATORS
+- Comparison: find values in a certain range
+    - provide additional ways to locate data
+    - $eq	$ne	(equal to and not equal to)
+    - $gt	$lt	(greater/less than)
+    - $gte	$lte	(greater/less than or equal to)
+    - {"<field>": {<operator>: <value>} }
+    - Lab 1: db.zips.find({"pop":{"$lt": 1000}}).count()
+    - db.zips.find({ "pop": { "$gte": 5000, "$lte": 1000000 }}).count()
+- Logic 
+    - $and #default operator {"<field>": {$gt": 25, "$lt": 100}}
+    - $or	{<operator>: [{statement1}, {statement2},...]}
+    - $nor #returns all documents that fail to match both cases
+    - $not	[$not: {statament}} #negates query requirements #negates STATEMENT
+    - db.routes.find({ "$and": [ { "$or" :[ { "dst_airport": "KZN" },
+                                    { "src_airport": "KZN" }
+                                  ] },
+                          { "$or:[ { "airplane": "CR2" },
+                                     { "airplane": "A81" } ] }
+                         ]}).pretty()
+    - Quiz 1: db.inspections.find({ "result": "Out of Business",
+                      "sector": "Home Improvement Contractor - 100" }).count()
+    - db.zips.find({ "$nor": [ { "pop": { "$lt":5000 } },
+             { "pop": { "$gt": 1000000 } } ] } ).count()
+
+ARRAY OPERATORS
