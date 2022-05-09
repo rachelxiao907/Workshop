@@ -1,0 +1,47 @@
+Rachel Xiao
+SoftDev
+K37 -- Another DB Perspective (ch 3)
+2022-05-09
+time spent: 0.8 hours
+
+- Every MongoDB document must have a unique _id value (ex: "_id": "1a")
+- Inserting a new document = default value for the _id field is an ObjectId()
+    - you can change the value if you know your replacement value is an unique identifier
+- Inserting New Documents Errors
+    - duplicate key error
+	- a document of this _id value already exists
+	- --drop removes the whole collection before inserting it back
+- Inserting MULTIPLE documents at a time
+    - db.< collection>.insert([{}, {}, {}])
+    - just make sure _id is different
+    - default: mongo inserts the documents in order so when one fails, the others after it won't be inserted because the insert operation halts
+    - db.inspections.insert( [ { }, { } ] , { "ordered": false } ) # all documents with unique _id will be added to the collection
+- db.<collection>.find( {<JSON SPECIFICATIONS>} )
+- inserting a document into a collection that DOES NOT exist well make a new collection for you
+- you can have an array of documents as a value {{}, {}]
+
+- db.<collection>.updateOne(<query>, <update>) = findOne() #updates first document that matches query
+- updateMany(<query>, <update>) = find() #updates all documents that match a given query
+- UPDATE OPERATORS (MQL)
+    - {"$inc": {"<field>": <increment value>} } #increments the value of a specified field by the given amount
+    - {"$set": {"<field>": <new value>} } #updates the value of a given field with a specified value 
+	- putting a field that doesn't exist CREATES a new field
+    - {"$push": {"<field>": <value>} } #ADDS an element to an array field
+	- putting a field that doesn't exist CREATES a new field
+
+- db.<collection>.deleteOne() #ONLY a good approach when u query with _id
+- deleteMany()
+- use drop to delete a collection db.<collection>.drop()
+- When all collections are dropped from a database, the database no longer appears in the list of databases when you run show dbs -> database empty = no more database
+
+DEMO
+mongo "mongodb+srv://sandbox.15ryj.mongodb.net/myFirstDatabase" --username m001-student
+OR mongo "mongodb+srv://<username>:<password>@<cluster>.mongodb.net/admin"
+
+m001-mongodb-basics
+
+use <database>
+
+db.<collection>.findOne() #gets random document from collection
+
+db.<ecollection>.insert(<JSON data>)
