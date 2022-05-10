@@ -28,5 +28,34 @@ QUERY OPERATORS
                       "sector": "Home Improvement Contractor - 100" }).count()
     - db.zips.find({ "$nor": [ { "pop": { "$lt":5000 } },
              { "pop": { "$gt": 1000000 } } ] } ).count()
+- Expressive
+    - $expr allows us to use variables and conditional statements
+    - {"$expr":{["start station id", "end station id"]}}
+db.trips.find({ "$expr": { "$and": [ { "$gt": [ "$tripduration", 1200 ]},
+                         { "$eq": [ "$end station id", "$start station id" ]}
+                       ]}}).count()
+    - aggregation syntax: { <operator>: { <field>, <value> } }
+    - MQL syntax: { <field>: { <operator>:  <value> } }
 
 ARRAY OPERATORS
+- $push #adds element to an array or turns a field into an array field 
+- the order of an array matters
+- $all disregards the order of array
+- {<array field> : { $size: <number> }} #returns a cursor with all documents where the specified array field is exactly the given length
+- {<array field> : { $all: <array> }} #returns a cursor with all documents where the specified array field contains all the given elements regardless of their order
+- querying an array field using an array returns only exact array matches
+- Projections **
+    - db.listingsAndReviews.find({ "amenities":
+        { "$size": 20, "$all": [ "Internet", "Wifi",  "Kitchen", "Heating",
+                                 "Family/kid friendly", "Washer", "Dryer",
+                                 "Essentials", "Shampoo", "Hangers",
+                                 "Hair dryer", "Iron",
+                                 "Laptop friendly workspace" ] } },
+                            {"price": 1, "address": 1}).pretty()
+    - displays price and address on top
+    - db.<collection>.find({ <query> }, { <field>: 0/1 })
+	- 1 - include the field
+	- 0 - exclude the field
+	- only mix ones and zeros when _id is 0
+    - $elemMatch #matches documents that contain an array field with at least one element that matches the specified query criteria
+- Sub-documents
