@@ -1,0 +1,50 @@
+Rachel Xiao
+SoftDev
+K39 -- Another DB Perspective (ch 5)
+2022-05-12
+time spent: 1.2 hour
+
+AGGREGATION FRAMEWORK
+- Another way to query data in MongoDB
+- db.<collection>.aggregate([
+{ $<operator>: {<field>: <value>}},
+])
+  [] means arrays which means the order of actions matter --> multiple filters
+- db.listingsAndReviews.aggregate([
+                                  { "$match": { "amenities": "Wifi" } },
+                                  { "$project": { "price": 1,
+                                                  "address": 1,
+                                                  "_id": 0 }}]).pretty()
+ 
+
+Find all documents that have Wifi as one of the amenities. Only include price and address in the resulting cursor
+- db.listingsAndReviews.aggregate([
+                                  { "$match": { "amenities": "Wifi" } },
+                                  { "$project": { "price": 1,
+                                                  "address": 1,
+                                                  "_id": 0 }}]).pretty()
+Using the aggregation framework find all documents that have Wifi as one of the amenities. Only include price and address in the resulting cursor
+- $group #computes and reshapes data by categorizing them
+  { $group:
+  {
+  <field>" { <accumulator> : <expression> },
+  } }
+
+- sort({<field>: 0 or 1}) #gets all the documents and returns them in increasing order
+- limit() #the amount of documents you want
+- Mongo always assumes the order of sort and then limit
+
+INDEXES
+- db.<collection>.createIndex( { <field>: <value> } ) #single index
+- db.<collection>.createIndex( { <field>: <value>, <field1>: <value1> } ) #compound index
+
+DATA MODELING
+- a way to organize fields in a document to support your application performance and querying capabilities
+- DATA IS STORED IN THE WAY THAT IT IS USED
+
+UPSERT - Update or Insert?
+- db.<collection>.updateOne( {<query to locate>}, {<update>}, {"upsert": true} )
+- upsert : true =-> conditional updates
+- upsert : false
+    - a match = update the matched document
+    - no match = insert a new document
