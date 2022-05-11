@@ -1,0 +1,28 @@
+Rachel Xiao
+SoftDev
+K39 -- Another DB Perspective (ch 6)
+2022-05-12
+time spent: 0.7 hours
+
+ATLAS FEATURES - MORE DATA EXPLORER
+- Indexes: views indexes of collections
+- Schema Anti-Patterns: provides advice about data model
+- Aggregation: build aggregation patterns -> can export pipelines to different languages
+- Atlas Search: fancy indexing that enables advanced search functionality
+
+PRODUCTS AND OPTIONS
+- Organizations groups projects, teams, and billing
+- REALM: services to build web or mobile applications or integrate MongoDB Atlas data into an application
+- CHARTS: creates dynamic data visualizations
+
+COMPASS
+- don't touch admin, config, and local databases
+- Graphical User Interface Product to help you visually explore your data
+- Schema: takes a sample of 1,000 documents and analyzes their schema so that you can have a high level overview of the shape of your documents
+    - shows percentages of values of fields
+- Explain Plan: explain how the data you were looking for was found and retrieved from the database
+    - scans cluster and reports the index scan
+    - shows why something happens when you're executing actions
+- Validation: determine what is allowed and not allowed in your database
+    - EX: throw an error when data type is incorrect
+	  set fields to be required
